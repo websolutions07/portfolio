@@ -450,3 +450,56 @@ textarea {
     transition: none;
   }
 }
+
+/* ==========================================================================
+   User Overrides / Fixes
+   ========================================================================== */
+
+/* 1. Force hidden sections and grid cards to display */
+#projects,
+#services,
+.projects-grid,
+.services-grid,
+.project-card,
+.service-card,
+[data-aos],
+.js-reveal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  display: block !important;
+}
+
+.projects-grid,
+.services-grid {
+  display: grid !important;
+}
+
+/* 2. Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  /* Hide oversized 3D graphics covering form elements */
+  .decorative-flower,
+  .contact-3d-graphic,
+  [class*="flower"] {
+    display: none !important;
+  }
+
+  /* Stack contact form single-column */
+  .contact-container,
+  .contact-form {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  input,
+  textarea,
+  button[type="submit"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
