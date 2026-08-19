@@ -225,7 +225,7 @@
       status.hidden = false;
 
       try {
-        const response = await fetch('http://localhost:3000/api/contact', {
+        const response = await fetch('http://portfolio-7cm8.onrender.com/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -840,14 +840,14 @@
       setTimeout(() => {
         const newRises = document.querySelectorAll('#services-list .rise');
         newRises.forEach(node => {
-           pending.push({ node: node, className: 'is-in', ratio: 0.12 });
-           if ("IntersectionObserver" in window && typeof io !== 'undefined') {
-              io.observe(node);
-           }
+          pending.push({ node: node, className: 'is-in', ratio: 0.12 });
+          if ("IntersectionObserver" in window && typeof io !== 'undefined') {
+            io.observe(node);
+          }
         });
         // Call sweep to immediately reveal items in view
         if (typeof sweep === 'function') {
-           sweep();
+          sweep();
         }
       }, 50);
 
