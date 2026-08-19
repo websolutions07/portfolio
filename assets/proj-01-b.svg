@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 620" width="460" height="620" role="img" aria-label="Close crop of a stylised 3D flower garden with red-orange blooms front and centre">
+  <defs>
+    <linearGradient id="p01b-sky" x1="0.1" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#d2dbcd"/>
+      <stop offset="0.24" stop-color="#b4c3ac"/>
+      <stop offset="0.5" stop-color="#89a081"/>
+      <stop offset="0.76" stop-color="#587050"/>
+      <stop offset="1" stop-color="#2d422a"/>
+    </linearGradient>
+    <radialGradient id="p01b-sun" cx="0.3" cy="0.1" r="0.62">
+      <stop offset="0" stop-color="#fdfff4" stop-opacity="0.8"/>
+      <stop offset="0.45" stop-color="#e8f0d8" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#e8f0d8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="p01b-turf" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#3d5937"/>
+      <stop offset="0.55" stop-color="#243d1e"/>
+      <stop offset="1" stop-color="#112310"/>
+    </linearGradient>
+
+    <radialGradient id="p01b-pom-shade" cx="0.36" cy="0.3" r="0.74">
+      <stop offset="0.42" stop-color="#2f1500" stop-opacity="0"/>
+      <stop offset="0.78" stop-color="#2f1500" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#1d0d00" stop-opacity="0.55"/>
+    </radialGradient>
+    <radialGradient id="p01b-pom-hi" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.62"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="p01b-spec" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="p01b-spire-shade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a0b33" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#1a0b33" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#140826" stop-opacity="0.52"/>
+    </linearGradient>
+    <linearGradient id="p01b-spire-hi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="p01b-stem" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6f9455"/>
+      <stop offset="0.5" stop-color="#3d6130"/>
+      <stop offset="1" stop-color="#1d3418"/>
+    </linearGradient>
+    <radialGradient id="p01b-core" cx="0.36" cy="0.32" r="0.72">
+      <stop offset="0" stop-color="#ffe98f"/>
+      <stop offset="0.55" stop-color="#f2b428"/>
+      <stop offset="1" stop-color="#a96c07"/>
+    </radialGradient>
+    <radialGradient id="p01b-vignette" cx="0.5" cy="0.46" r="0.8">
+      <stop offset="0.5" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.44"/>
+    </radialGradient>
+
+    <filter id="p01b-blur-far" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="p01b-blur-mid" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="p01b-blur-bokeh" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="p01b-organic" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016 0.034" numOctaves="3" seed="23" result="p01b-n"/>
+      <feDisplacementMap in="SourceGraphic" in2="p01b-n" scale="22" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="1.3"/>
+    </filter>
+    <filter id="p01b-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="9" result="p01b-g"/>
+      <feColorMatrix in="p01b-g" type="matrix"
+        values="0 0 0 0 0.62  0 0 0 0 0.6  0 0 0 0 0.5  1.1 0 0 0 -0.52"/>
+    </filter>
+
+    <g id="p01b-pom">
+      <g fill="currentColor" stroke="#2a1000" stroke-opacity="0.13" stroke-width="1.2">
+        <circle cx="30" cy="0" r="9"/>
+        <circle cx="25.98" cy="15" r="9"/>
+        <circle cx="15" cy="25.98" r="9"/>
+        <circle cx="0" cy="30" r="9"/>
+        <circle cx="-15" cy="25.98" r="9"/>
+        <circle cx="-25.98" cy="15" r="9"/>
+        <circle cx="-30" cy="0" r="9"/>
+        <circle cx="-25.98" cy="-15" r="9"/>
+        <circle cx="-15" cy="-25.98" r="9"/>
+        <circle cx="0" cy="-30" r="9"/>
+        <circle cx="15" cy="-25.98" r="9"/>
+        <circle cx="25.98" cy="-15" r="9"/>
+        <circle cx="17" cy="0" r="8"/>
+        <circle cx="13.02" cy="10.93" r="8"/>
+        <circle cx="2.95" cy="16.74" r="8"/>
+        <circle cx="-8.5" cy="14.72" r="8"/>
+        <circle cx="-15.97" cy="5.81" r="8"/>
+        <circle cx="-15.97" cy="-5.81" r="8"/>
+        <circle cx="-8.5" cy="-14.72" r="8"/>
+        <circle cx="2.95" cy="-16.74" r="8"/>
+        <circle cx="13.02" cy="-10.93" r="8"/>
+        <circle cx="7.5" cy="0" r="7"/>
+        <circle cx="2.32" cy="7.13" r="7"/>
+        <circle cx="-6.07" cy="4.41" r="7"/>
+        <circle cx="-6.07" cy="-4.41" r="7"/>
+        <circle cx="2.32" cy="-7.13" r="7"/>
+        <circle cx="0" cy="0" r="6"/>
+      </g>
+      <circle cx="0" cy="0" r="41" fill="url(#p01b-pom-shade)"/>
+      <circle cx="-13" cy="-14" r="22" fill="url(#p01b-pom-hi)"/>
+      <g fill="url(#p01b-spec)">
+        <circle cx="-27" cy="-17" r="3.2"/>
+        <circle cx="-16.5" cy="-27" r="3"/>
+        <circle cx="-9.5" cy="-16" r="2.6"/>
+        <circle cx="-17" cy="-7" r="2.6"/>
+        <circle cx="-6.5" cy="-5" r="2.2"/>
+        <circle cx="-2" cy="-20" r="2.2"/>
+      </g>
+    </g>
+
+    <g id="p01b-spire">
+      <path d="M0 26C-3-30 3-90 0-158" stroke="url(#p01b-stem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+      <g fill="currentColor">
+        <circle cx="0" cy="-6" r="11"/><circle cx="-11" cy="-12" r="9.5"/><circle cx="11" cy="-14" r="9.5"/>
+        <circle cx="0" cy="-24" r="11"/><circle cx="-12" cy="-30" r="9.5"/><circle cx="11" cy="-32" r="9"/>
+        <circle cx="0" cy="-42" r="10.5"/><circle cx="-11" cy="-48" r="9"/><circle cx="10" cy="-50" r="8.5"/>
+        <circle cx="0" cy="-60" r="10"/><circle cx="-10" cy="-66" r="8.5"/><circle cx="9" cy="-68" r="8"/>
+        <circle cx="0" cy="-78" r="9.5"/><circle cx="-9" cy="-84" r="8"/><circle cx="8" cy="-86" r="7.5"/>
+        <circle cx="0" cy="-96" r="8.5"/><circle cx="-8" cy="-101" r="7"/><circle cx="7" cy="-103" r="6.8"/>
+        <circle cx="0" cy="-113" r="7.5"/><circle cx="-6.5" cy="-118" r="6"/><circle cx="6" cy="-120" r="5.8"/>
+        <circle cx="0" cy="-129" r="6.5"/><circle cx="-5" cy="-134" r="5"/><circle cx="4.8" cy="-136" r="4.8"/>
+        <circle cx="0" cy="-145" r="5.5"/><circle cx="-3.6" cy="-150" r="4"/><circle cx="3.6" cy="-152" r="3.8"/>
+        <circle cx="0" cy="-160" r="4.5"/><circle cx="0" cy="-170" r="3.2"/>
+      </g>
+      <ellipse cx="0" cy="-86" rx="21" ry="92" fill="url(#p01b-spire-shade)"/>
+      <ellipse cx="-9" cy="-96" rx="11" ry="72" fill="url(#p01b-spire-hi)"/>
+      <g fill="url(#p01b-spec)">
+        <circle cx="-9" cy="-31" r="2.6"/><circle cx="-8" cy="-67" r="2.4"/>
+        <circle cx="-6.5" cy="-102" r="2.1"/><circle cx="-4" cy="-135" r="1.8"/>
+      </g>
+    </g>
+
+    <g id="p01b-round">
+      <g fill="currentColor" stroke="#3a2410" stroke-opacity="0.12" stroke-width="1.1">
+        <ellipse cx="17" cy="0" rx="17" ry="11"/>
+        <ellipse cx="17" cy="0" rx="17" ry="11" transform="rotate(60)"/>
+        <ellipse cx="17" cy="0" rx="17" ry="11" transform="rotate(120)"/>
+        <ellipse cx="17" cy="0" rx="17" ry="11" transform="rotate(180)"/>
+        <ellipse cx="17" cy="0" rx="17" ry="11" transform="rotate(240)"/>
+        <ellipse cx="17" cy="0" rx="17" ry="11" transform="rotate(300)"/>
+      </g>
+      <circle cx="0" cy="0" r="34" fill="url(#p01b-pom-shade)"/>
+      <circle cx="-12" cy="-12" r="20" fill="url(#p01b-pom-hi)"/>
+      <circle cx="0" cy="0" r="11" fill="url(#p01b-core)"/>
+      <circle cx="-3.5" cy="-3.5" r="4" fill="url(#p01b-spec)"/>
+    </g>
+
+    <g id="p01b-leaf">
+      <path d="M0 0C14-11 35-15 54-8 37 9 15 11 0 0Z" fill="currentColor"/>
+      <path d="M3 0C17-6 36-9 51-6" stroke="#0c2812" stroke-opacity="0.4" stroke-width="1.6" fill="none"/>
+    </g>
+    <g id="p01b-spray">
+      <use href="#p01b-leaf" transform="rotate(-58)"/>
+      <use href="#p01b-leaf" transform="rotate(-20) scale(1.15)"/>
+      <use href="#p01b-leaf" transform="rotate(16) scale(0.95)"/>
+      <use href="#p01b-leaf" transform="rotate(-140) scale(1.05)"/>
+      <use href="#p01b-leaf" transform="rotate(-172) scale(0.9)"/>
+      <use href="#p01b-leaf" transform="rotate(-108) scale(0.8)"/>
+    </g>
+  </defs>
+
+  <rect width="460" height="620" fill="url(#p01b-sky)"/>
+  <rect width="460" height="620" fill="url(#p01b-sun)"/>
+
+  <g filter="url(#p01b-blur-far)" opacity="0.95">
+    <ellipse cx="70" cy="222" rx="180" ry="80" fill="#5d7850"/>
+    <ellipse cx="300" cy="206" rx="200" ry="72" fill="#516d47"/>
+    <ellipse cx="450" cy="238" rx="170" ry="86" fill="#456140"/>
+    <ellipse cx="180" cy="268" rx="240" ry="80" fill="#3a5634"/>
+    <ellipse cx="410" cy="280" rx="200" ry="76" fill="#334c2e"/>
+    <circle cx="118" cy="196" r="24" fill="#e8a34c" opacity="0.75"/>
+    <circle cx="278" cy="186" r="20" fill="#f0b95a" opacity="0.7"/>
+    <circle cx="404" cy="204" r="25" fill="#dd8b3c" opacity="0.7"/>
+    <circle cx="44" cy="210" r="18" fill="#efe0bd" opacity="0.62"/>
+    <circle cx="200" cy="222" r="17" fill="#b79ae8" opacity="0.6"/>
+  </g>
+
+  <path d="M0 272C96 246 178 282 268 266 358 250 402 288 460 268L460 620 0 620Z" fill="url(#p01b-turf)"/>
+
+  <g fill="none" stroke="#2c4726" stroke-linecap="round" filter="url(#p01b-blur-mid)">
+    <path d="M28 452C12 386 34 344 20 292" stroke-width="6"/>
+    <path d="M112 470C98 404 124 358 110 302" stroke-width="5"/>
+    <path d="M214 452C226 388 200 344 214 290" stroke-width="6"/>
+    <path d="M318 476C302 410 328 362 314 304" stroke-width="5"/>
+    <path d="M414 456C430 392 402 346 416 292" stroke-width="6"/>
+  </g>
+
+  <g filter="url(#p01b-blur-mid)" opacity="0.94">
+    <use href="#p01b-spray" transform="translate(46 300) scale(0.62)" color="#33512c"/>
+    <use href="#p01b-spray" transform="translate(238 294) scale(0.6)" color="#2e4a28"/>
+    <use href="#p01b-spray" transform="translate(430 302) scale(0.62)" color="#2c4726"/>
+    <use href="#p01b-spire" transform="translate(40 320) scale(0.52)" color="#9d7fd6"/>
+    <use href="#p01b-spire" transform="translate(176 314) scale(0.5)" color="#8a6acd"/>
+    <use href="#p01b-spire" transform="translate(320 324) scale(0.54)" color="#b09aea"/>
+    <use href="#p01b-spire" transform="translate(448 318) scale(0.5)" color="#8f6fd0"/>
+    <use href="#p01b-pom" transform="translate(92 264) scale(0.52)" color="#e8823a"/>
+    <use href="#p01b-pom" transform="translate(214 250) scale(0.48)" color="#f0a63a"/>
+    <use href="#p01b-pom" transform="translate(346 268) scale(0.5)" color="#e2702c"/>
+    <use href="#p01b-pom" transform="translate(444 246) scale(0.46)" color="#efac44"/>
+    <use href="#p01b-round" transform="translate(148 284) scale(0.5)" color="#efe4c8"/>
+    <use href="#p01b-round" transform="translate(392 288) scale(0.48)" color="#e7cfc9"/>
+  </g>
+
+  <g filter="url(#p01b-blur-mid)" opacity="0.96">
+    <use href="#p01b-spray" transform="translate(132 342) scale(0.72)" color="#2f4c29"/>
+    <use href="#p01b-spray" transform="translate(372 348) scale(0.7)" color="#2a4524"/>
+    <use href="#p01b-spire" transform="translate(112 372) scale(0.64)" color="#9b7cd8"/>
+    <use href="#p01b-spire" transform="translate(288 378) scale(0.62)" color="#8768ce"/>
+    <use href="#p01b-spire" transform="translate(438 370) scale(0.66)" color="#ac92e6"/>
+    <use href="#p01b-pom" transform="translate(36 318) scale(0.62)" color="#ef8f26"/>
+    <use href="#p01b-pom" transform="translate(186 308) scale(0.6)" color="#e4682a"/>
+    <use href="#p01b-pom" transform="translate(348 316) scale(0.64)" color="#f2a02c"/>
+    <use href="#p01b-round" transform="translate(102 328) scale(0.58)" color="#f2e6cc"/>
+    <use href="#p01b-round" transform="translate(268 322) scale(0.56)" color="#eed6ce"/>
+    <use href="#p01b-round" transform="translate(430 330) scale(0.58)" color="#f4ebd4"/>
+  </g>
+
+  <g opacity="0.98">
+    <use href="#p01b-spray" transform="translate(96 404) scale(0.88)" color="#2b4826"/>
+    <use href="#p01b-spray" transform="translate(320 398) scale(0.9)" color="#25401f"/>
+    <use href="#p01b-spire" transform="translate(64 426) scale(0.8)" color="#a688e0"/>
+    <use href="#p01b-spire" transform="translate(230 418) scale(0.78)" color="#8563cb"/>
+    <use href="#p01b-spire" transform="translate(404 432) scale(0.84)" color="#b49bec"/>
+    <use href="#p01b-round" transform="translate(34 388) scale(0.72)" color="#f4ead2"/>
+    <use href="#p01b-round" transform="translate(196 356) scale(0.66)" color="#f2d6ce"/>
+    <use href="#p01b-round" transform="translate(360 392) scale(0.7)" color="#f6efdb"/>
+    <use href="#p01b-pom" transform="translate(122 370) scale(0.78)" color="#f4761b"/>
+    <use href="#p01b-pom" transform="translate(294 358) scale(0.8)" color="#f6a91b"/>
+    <use href="#p01b-pom" transform="translate(438 376) scale(0.74)" color="#e8541b"/>
+  </g>
+
+  <g>
+    <use href="#p01b-spray" transform="translate(56 544) scale(1.26)" color="#1f3a1a"/>
+    <use href="#p01b-spray" transform="translate(268 566) scale(1.32)" color="#1b3417"/>
+    <use href="#p01b-spray" transform="translate(444 552) scale(1.22)" color="#22401c"/>
+    <use href="#p01b-spire" transform="translate(346 588) scale(1.04)" color="#8c6ad2"/>
+    <use href="#p01b-spire" transform="translate(84 614) scale(1.1)" color="#7a58c4"/>
+    <use href="#p01b-round" transform="translate(46 556) scale(1.14)" color="#f4c9c4"/>
+    <use href="#p01b-round" transform="translate(388 528) scale(1.18)" color="#f8f0da"/>
+    <use href="#p01b-pom" transform="translate(148 462) scale(1.2)" color="#e03a1e"/>
+    <use href="#p01b-pom" transform="translate(276 498) scale(1.34)" color="#e8541b"/>
+    <use href="#p01b-pom" transform="translate(96 566) scale(1.16)" color="#d93318"/>
+    <use href="#p01b-pom" transform="translate(408 452) scale(1.06)" color="#f6a91b"/>
+    <use href="#p01b-round" transform="translate(206 592) scale(1.2)" color="#f8f0da"/>
+    <use href="#p01b-pom" transform="translate(348 614) scale(1.26)" color="#e0451e"/>
+  </g>
+
+  <g filter="url(#p01b-blur-bokeh)" opacity="0.72">
+    <use href="#p01b-pom" transform="translate(-14 512) scale(1.66)" color="#f6a91b"/>
+    <use href="#p01b-pom" transform="translate(470 596) scale(1.5)" color="#e8541b"/>
+    <use href="#p01b-round" transform="translate(230 664) scale(1.6)" color="#f7ead0"/>
+  </g>
+
+  <g filter="url(#p01b-organic)" opacity="0.16">
+    <ellipse cx="150" cy="228" rx="180" ry="38" fill="#f4f7e6"/>
+    <ellipse cx="380" cy="206" rx="140" ry="30" fill="#ffffff"/>
+  </g>
+
+  <rect width="460" height="620" fill="url(#p01b-vignette)"/>
+  <rect width="460" height="620" filter="url(#p01b-grain)" opacity="0.3"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90" width="220" height="90" role="img" aria-label="Violeta K Design">
+  <path d="M110 6 110 29 90 38z" fill="#fff"/>
+  <path d="M110 6 130 38 110 29z" fill="#fff" opacity="0.6"/>
+  <text x="111" y="64" fill="#fff" text-anchor="middle"
+        font-family="Archivo, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="700" letter-spacing="2">VIOLETA K</text>
+  <text x="112.7" y="80" fill="#fff" text-anchor="middle"
+        font-family="Archivo, Helvetica, Arial, sans-serif"
+        font-size="8" font-weight="500" letter-spacing="5.5">DESIGN</text>
+</svg>

@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 620" width="460" height="620" role="img" aria-label="Close view of a miniature 3D cottage with a terracotta roof, a garden path and a small wooden cart">
+  <defs>
+    <linearGradient id="p02b-sky" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#f6d6ef"/>
+      <stop offset="0.26" stop-color="#ffd8a6"/>
+      <stop offset="0.6" stop-color="#ffc37f"/>
+      <stop offset="1" stop-color="#f0ad89"/>
+    </linearGradient>
+    <radialGradient id="p02b-sun" cx="0.82" cy="0.1" r="0.55">
+      <stop offset="0" stop-color="#fffdf0" stop-opacity="0.95"/>
+      <stop offset="0.22" stop-color="#ffeec0" stop-opacity="0.58"/>
+      <stop offset="0.62" stop-color="#ffd9a0" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffd9a0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="p02b-ground" x1="0.25" y1="0" x2="0.05" y2="1">
+      <stop offset="0" stop-color="#a6c268"/>
+      <stop offset="0.32" stop-color="#7da64a"/>
+      <stop offset="0.7" stop-color="#527d34"/>
+      <stop offset="1" stop-color="#2c5022"/>
+    </linearGradient>
+    <linearGradient id="p02b-wall-front" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0" stop-color="#e7d3af"/>
+      <stop offset="0.55" stop-color="#f7e8cd"/>
+      <stop offset="1" stop-color="#fdf5e4"/>
+    </linearGradient>
+    <linearGradient id="p02b-wall-side" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0" stop-color="#fff8ea"/>
+      <stop offset="1" stop-color="#ead3ac"/>
+    </linearGradient>
+    <linearGradient id="p02b-gable" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dac39c"/>
+      <stop offset="1" stop-color="#f4e4c8"/>
+    </linearGradient>
+    <linearGradient id="p02b-roof" x1="0.1" y1="1" x2="0.8" y2="0">
+      <stop offset="0" stop-color="#b6431e"/>
+      <stop offset="0.42" stop-color="#dd7038"/>
+      <stop offset="0.78" stop-color="#f0975a"/>
+      <stop offset="1" stop-color="#ffbe86"/>
+    </linearGradient>
+    <linearGradient id="p02b-roof-sheen" x1="0" y1="1" x2="0.6" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.75" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.48"/>
+    </linearGradient>
+    <linearGradient id="p02b-trunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#432716"/>
+      <stop offset="0.6" stop-color="#7a4a29"/>
+      <stop offset="1" stop-color="#a06b3d"/>
+    </linearGradient>
+    <radialGradient id="p02b-foliage-shade" cx="0.7" cy="0.26" r="0.8">
+      <stop offset="0.35" stop-color="#062012" stop-opacity="0"/>
+      <stop offset="0.74" stop-color="#062012" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#03150c" stop-opacity="0.62"/>
+    </radialGradient>
+    <radialGradient id="p02b-foliage-hi" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff3c8" stop-opacity="0.66"/>
+      <stop offset="0.55" stop-color="#e4f0a2" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#e4f0a2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="p02b-glow" cx="0.4" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#fff6d0"/>
+      <stop offset="0.6" stop-color="#ffd06a"/>
+      <stop offset="1" stop-color="#e08a26"/>
+    </radialGradient>
+    <linearGradient id="p02b-path" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ad8a5c"/>
+      <stop offset="0.45" stop-color="#e0c79c"/>
+      <stop offset="1" stop-color="#a3814f"/>
+    </linearGradient>
+    <linearGradient id="p02b-wood" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0" stop-color="#6a4020"/>
+      <stop offset="0.55" stop-color="#a06c3a"/>
+      <stop offset="1" stop-color="#c99055"/>
+    </linearGradient>
+    <radialGradient id="p02b-vignette" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="0.48" stop-color="#100603" stop-opacity="0"/>
+      <stop offset="1" stop-color="#100603" stop-opacity="0.46"/>
+    </radialGradient>
+
+    <filter id="p02b-shadow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <filter id="p02b-blur-far" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="p02b-blur-soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="p02b-blur-bokeh" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="p02b-organic" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013 0.028" numOctaves="3" seed="43" result="p02b-n"/>
+      <feDisplacementMap in="SourceGraphic" in2="p02b-n" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="p02b-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.92" numOctaves="3" seed="27" result="p02b-g"/>
+      <feColorMatrix in="p02b-g" type="matrix"
+        values="0 0 0 0 0.66  0 0 0 0 0.6  0 0 0 0 0.48  1.1 0 0 0 -0.54"/>
+    </filter>
+
+    <g id="p02b-cottage">
+      <g filter="url(#p02b-shadow)" opacity="0.42">
+        <polygon points="4,2 66,2 -12,30 -76,30" fill="#173a1c"/>
+        <ellipse cx="46" cy="1" rx="52" ry="8" fill="#0f2c15"/>
+      </g>
+      <polygon points="0,0 64,0 64,-46 0,-46" fill="url(#p02b-wall-front)"/>
+      <polygon points="64,0 88,-15 88,-61 64,-46" fill="url(#p02b-wall-side)"/>
+      <polygon points="0,0 64,0 64,-5 0,-5" fill="#c9b28c" opacity="0.75"/>
+      <polygon points="0,-46 32,-76 64,-46" fill="url(#p02b-gable)"/>
+      <polygon points="-6,-42 32,-80 32,-75 0,-45" fill="#9c3a19"/>
+      <polygon points="69,-44 93,-59 56,-93 32,-78" fill="url(#p02b-roof)"/>
+      <g stroke="#8f3313" stroke-opacity="0.42" stroke-width="1.5" fill="none">
+        <path d="M61.6-50.8 85.6-65.8"/>
+        <path d="M54.2-57.6 78.2-72.6"/>
+        <path d="M46.8-64.4 70.8-79.4"/>
+        <path d="M39.4-71.2 63.4-86.2"/>
+      </g>
+      <g stroke="#8f3313" stroke-opacity="0.25" stroke-width="1" fill="none">
+        <path d="M64.6-47.4 27.6-81.4"/>
+        <path d="M75.4-54.2 38.4-88.2"/>
+        <path d="M86.2-61 49.2-95"/>
+      </g>
+      <polygon points="69,-44 93,-59 56,-93 32,-78" fill="url(#p02b-roof-sheen)"/>
+      <path d="M-6-42 32-80 70-42" stroke="#c2542a" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+      <path d="M32-79 56-94" stroke="#ffb583" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <g>
+        <polygon points="60,-78 70,-78 70,-100 60,-100" fill="#e6d0ab"/>
+        <polygon points="70,-78 77,-82 77,-104 70,-100" fill="#c9ac82"/>
+        <polygon points="58,-100 72,-100 79,-104 65,-104" fill="#a8431f"/>
+      </g>
+      <g stroke="#c9ab7f" stroke-width="2">
+        <rect x="8" y="-40" width="14" height="15" rx="1.5" fill="url(#p02b-glow)"/>
+        <rect x="42" y="-40" width="14" height="15" rx="1.5" fill="url(#p02b-glow)"/>
+      </g>
+      <path d="M15-40 15-25M8-32.5 22-32.5M49-40 49-25M42-32.5 56-32.5" stroke="#c9ab7f" stroke-width="1.4"/>
+      <g fill="#6f8f4a">
+        <rect x="6" y="-24" width="18" height="5" rx="1.5"/>
+        <rect x="40" y="-24" width="18" height="5" rx="1.5"/>
+      </g>
+      <g fill="#e8623a">
+        <circle cx="9" cy="-25" r="2.2"/><circle cx="15" cy="-26" r="2.4"/><circle cx="21" cy="-25" r="2.1"/>
+        <circle cx="43" cy="-25" r="2.2"/><circle cx="49" cy="-26" r="2.4"/><circle cx="55" cy="-25" r="2.1"/>
+      </g>
+      <polygon points="70,-26 80,-32 80,-45 70,-39" fill="url(#p02b-glow)" stroke="#c9ab7f" stroke-width="1.6"/>
+      <path d="M26 0 26-19A7 7 0 0 1 40-19L40 0Z" fill="#6b3d21"/>
+      <path d="M27-1 27-19A6 6 0 0 1 39-19L39-1Z" fill="none" stroke="#a87445" stroke-width="1.4"/>
+      <circle cx="37" cy="-9" r="1.2" fill="#f0c477"/>
+      <circle cx="32" cy="-58" r="4.5" fill="url(#p02b-glow)" stroke="#c9ab7f" stroke-width="1.4"/>
+    </g>
+
+    <g id="p02b-tree">
+      <ellipse cx="-34" cy="3" rx="44" ry="9" fill="#123018" opacity="0.4" filter="url(#p02b-shadow)"/>
+      <path d="M-4 3C-6-12-6-24-4-33L5-33C7-23 7-11 5 3Z" fill="url(#p02b-trunk)"/>
+      <g fill="currentColor">
+        <circle cx="-18" cy="-42" r="18"/>
+        <circle cx="16" cy="-46" r="17"/>
+        <circle cx="-2" cy="-62" r="19"/>
+        <circle cx="-11" cy="-30" r="15"/>
+        <circle cx="12" cy="-29" r="14"/>
+        <circle cx="1" cy="-44" r="23"/>
+      </g>
+      <ellipse cx="0" cy="-45" rx="35" ry="36" fill="url(#p02b-foliage-shade)"/>
+      <circle cx="13" cy="-58" r="17" fill="url(#p02b-foliage-hi)"/>
+    </g>
+
+    <!-- little wooden cart -->
+    <g id="p02b-cart">
+      <ellipse cx="20" cy="2" rx="52" ry="8" fill="#123018" opacity="0.4" filter="url(#p02b-shadow)"/>
+      <polygon points="-6,0 58,0 -22,22 -86,22" fill="#173a1c" opacity="0.32" filter="url(#p02b-shadow)"/>
+      <polygon points="0,-18 56,-18 56,-38 0,-38" fill="url(#p02b-wood)"/>
+      <polygon points="56,-18 76,-29 76,-49 56,-38" fill="#7d4f27"/>
+      <polygon points="0,-38 56,-38 76,-49 20,-49" fill="#c69355"/>
+      <g stroke="#5b3418" stroke-width="1.4" stroke-opacity="0.65">
+        <path d="M14-18 14-38"/><path d="M28-18 28-38"/><path d="M42-18 42-38"/>
+      </g>
+      <g fill="#d8b46a">
+        <ellipse cx="26" cy="-45" rx="16" ry="7"/>
+        <ellipse cx="46" cy="-49" rx="12" ry="6"/>
+      </g>
+      <ellipse cx="26" cy="-46" rx="16" ry="7" fill="#fbe6a8" opacity="0.5"/>
+      <path d="M56-30 92-22" stroke="#8a5a2c" stroke-width="4" stroke-linecap="round"/>
+      <path d="M56-24 92-16" stroke="#8a5a2c" stroke-width="4" stroke-linecap="round"/>
+      <g>
+        <circle cx="12" cy="-12" r="14" fill="#5e3a1c"/>
+        <circle cx="12" cy="-12" r="10.5" fill="#a97441"/>
+        <circle cx="12" cy="-12" r="4" fill="#4a2c14"/>
+        <g stroke="#4a2c14" stroke-width="1.6">
+          <path d="M12-22 12-2M2-12 22-12M5-19 19-5M19-19 5-5"/>
+        </g>
+        <circle cx="9" cy="-16" r="4" fill="#ffe1a8" opacity="0.35"/>
+      </g>
+      <g>
+        <circle cx="50" cy="-12" r="14" fill="#5e3a1c"/>
+        <circle cx="50" cy="-12" r="10.5" fill="#a97441"/>
+        <circle cx="50" cy="-12" r="4" fill="#4a2c14"/>
+        <g stroke="#4a2c14" stroke-width="1.6">
+          <path d="M50-22 50-2M40-12 60-12M43-19 57-5M57-19 43-5"/>
+        </g>
+        <circle cx="47" cy="-16" r="4" fill="#ffe1a8" opacity="0.35"/>
+      </g>
+    </g>
+
+    <!-- garden flower tuft -->
+    <g id="p02b-tuft">
+      <path d="M0 0C-4-10-2-18 0-24M0 0C-10-8-12-16-11-22M0 0C8-8 11-15 10-21" stroke="#3d6a2a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <circle cx="0" cy="-26" r="5" fill="currentColor"/>
+      <circle cx="-11" cy="-24" r="4.2" fill="currentColor"/>
+      <circle cx="10" cy="-23" r="4.4" fill="currentColor"/>
+      <circle cx="1.6" cy="-27.6" r="1.8" fill="#fff6d8" opacity="0.8"/>
+      <circle cx="-9.6" cy="-25.4" r="1.5" fill="#fff6d8" opacity="0.7"/>
+      <circle cx="11.4" cy="-24.4" r="1.5" fill="#fff6d8" opacity="0.7"/>
+    </g>
+  </defs>
+
+  <rect width="460" height="620" fill="url(#p02b-sky)"/>
+  <rect width="460" height="620" fill="url(#p02b-sun)"/>
+  <g filter="url(#p02b-organic)" opacity="0.42">
+    <ellipse cx="120" cy="86" rx="150" ry="20" fill="#fff2dc"/>
+    <ellipse cx="340" cy="52" rx="120" ry="14" fill="#ffe6c8"/>
+    <ellipse cx="60" cy="150" rx="110" ry="12" fill="#ffd9bd"/>
+  </g>
+
+  <g filter="url(#p02b-blur-far)">
+    <path d="M-20 244C60 198 150 214 240 200 330 186 400 220 480 200L480 300-20 300Z" fill="#9db98a" opacity="0.85"/>
+    <path d="M-20 258C70 226 160 246 250 234 340 222 410 250 480 236L480 320-20 320Z" fill="#7b9c6a" opacity="0.9"/>
+  </g>
+
+  <path d="M0 240C110 224 240 254 460 232L460 620 0 620Z" fill="url(#p02b-ground)"/>
+  <g filter="url(#p02b-organic)" opacity="0.3">
+    <ellipse cx="110" cy="326" rx="150" ry="36" fill="#b5d074"/>
+    <ellipse cx="380" cy="300" rx="140" ry="30" fill="#c2d97e"/>
+    <ellipse cx="230" cy="560" rx="240" ry="56" fill="#2c4d1f"/>
+  </g>
+
+  <!-- distant hedgerow -->
+  <g filter="url(#p02b-blur-far)" opacity="0.92">
+    <use href="#p02b-tree" transform="translate(46 274) scale(0.48)" color="#5d8a3e"/>
+    <use href="#p02b-tree" transform="translate(160 268) scale(0.42)" color="#4f7c36"/>
+    <use href="#p02b-tree" transform="translate(330 270) scale(0.5)" color="#618f42"/>
+    <use href="#p02b-tree" transform="translate(440 276) scale(0.46)" color="#4a7433"/>
+  </g>
+
+  <!-- garden path to the door -->
+  <path d="M138 620 292 620 218 434 180 434Z" fill="url(#p02b-path)"/>
+  <path d="M138 620 292 620 218 434 180 434Z" fill="none" stroke="#8d6f42" stroke-width="2" stroke-opacity="0.5"/>
+  <g fill="#f0dcb4" opacity="0.55">
+    <ellipse cx="199" cy="446" rx="14" ry="4"/>
+    <ellipse cx="197" cy="472" rx="17" ry="5"/>
+    <ellipse cx="202" cy="504" rx="21" ry="6"/>
+    <ellipse cx="196" cy="542" rx="25" ry="7"/>
+    <ellipse cx="203" cy="586" rx="30" ry="8"/>
+  </g>
+
+  <!-- back fence -->
+  <g transform="translate(0 6)">
+    <path d="M18 452 128 452" stroke="#2c4a1e" stroke-width="7" stroke-opacity="0.3" filter="url(#p02b-shadow)"/>
+    <g fill="url(#p02b-wood)">
+      <path d="M22 452 22 420 27 414 32 420 32 452Z"/>
+      <path d="M44 452 44 420 49 414 54 420 54 452Z"/>
+      <path d="M66 452 66 420 71 414 76 420 76 452Z"/>
+      <path d="M88 452 88 420 93 414 98 420 98 452Z"/>
+      <path d="M110 452 110 420 115 414 120 420 120 452Z"/>
+    </g>
+    <path d="M18 430 126 430M18 444 126 444" stroke="#8a5a2c" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <use href="#p02b-tree" transform="translate(28 402) scale(0.92)" color="#4c7b34"/>
+  <use href="#p02b-tree" transform="translate(430 398) scale(1.05)" color="#3f6b2c"/>
+
+  <!-- the cottage -->
+  <use href="#p02b-cottage" transform="translate(108 434) scale(2.6)"/>
+
+  <!-- garden planting along the path -->
+  <g>
+    <use href="#p02b-tuft" transform="translate(160 452) scale(0.9)" color="#f0a63a"/>
+    <use href="#p02b-tuft" transform="translate(244 448) scale(0.85)" color="#e8623a"/>
+    <use href="#p02b-tuft" transform="translate(140 486) scale(1.05)" color="#f2d0d8"/>
+    <use href="#p02b-tuft" transform="translate(266 490) scale(1.1)" color="#f6c22c"/>
+    <use href="#p02b-tuft" transform="translate(112 528) scale(1.25)" color="#e04b8f"/>
+    <use href="#p02b-tuft" transform="translate(300 536) scale(1.3)" color="#f28a2c"/>
+    <use href="#p02b-tuft" transform="translate(74 576) scale(1.5)" color="#f6ecc8"/>
+    <use href="#p02b-tuft" transform="translate(338 592) scale(1.55)" color="#dd4a3a"/>
+  </g>
+
+  <!-- the cart -->
+  <use href="#p02b-cart" transform="translate(268 556) scale(1.22)"/>
+
+  <!-- foreground grass -->
+  <g fill="none" stroke="#22401a" stroke-linecap="round">
+    <path d="M14 620C2 578 22 556 10 528" stroke-width="7"/>
+    <path d="M52 620C64 582 42 560 56 534" stroke-width="6"/>
+    <path d="M414 620C426 578 402 556 416 528" stroke-width="7"/>
+    <path d="M450 620C438 584 456 560 444 536" stroke-width="6"/>
+  </g>
+  <use href="#p02b-tree" transform="translate(-16 626) scale(1.45)" color="#2f5a22"/>
+
+  <g filter="url(#p02b-blur-bokeh)" opacity="0.6">
+    <ellipse cx="34" cy="600" rx="110" ry="66" fill="#20411a"/>
+    <ellipse cx="432" cy="592" rx="120" ry="70" fill="#1b3a17"/>
+    <ellipse cx="220" cy="632" rx="180" ry="40" fill="#24461c"/>
+  </g>
+
+  <rect width="460" height="620" fill="url(#p02b-sun)" opacity="0.34"/>
+  <rect width="460" height="620" fill="url(#p02b-vignette)"/>
+  <rect width="460" height="620" filter="url(#p02b-grain)" opacity="0.28"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Four dot cluster">
+  <g fill="currentColor">
+    <circle cx="51" cy="51" r="49" />
+    <circle cx="149" cy="51" r="49" />
+    <circle cx="51" cy="149" r="49" />
+    <circle cx="149" cy="149" r="49" />
+  </g>
+</svg>

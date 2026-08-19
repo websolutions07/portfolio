@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Purple five petal flower with yellow centre">
+  <defs>
+    <clipPath id="decoflower-clip">
+      <ellipse cx="100" cy="52" rx="36" ry="45" />
+      <ellipse cx="100" cy="52" rx="36" ry="45" transform="rotate(72 100 100)" />
+      <ellipse cx="100" cy="52" rx="36" ry="45" transform="rotate(144 100 100)" />
+      <ellipse cx="100" cy="52" rx="36" ry="45" transform="rotate(216 100 100)" />
+      <ellipse cx="100" cy="52" rx="36" ry="45" transform="rotate(288 100 100)" />
+      <circle cx="100" cy="100" r="42" />
+    </clipPath>
+
+    <radialGradient id="decoflower-body" cx="62" cy="50" r="168" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e2b6ff" />
+      <stop offset="0.22" stop-color="#c184f7" />
+      <stop offset="0.5" stop-color="#9448e6" />
+      <stop offset="0.78" stop-color="#6a24bd" />
+      <stop offset="1" stop-color="#43107f" />
+    </radialGradient>
+
+    <radialGradient id="decoflower-deep" cx="146" cy="154" r="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#340a68" stop-opacity="0.72" />
+      <stop offset="0.6" stop-color="#4a1290" stop-opacity="0.24" />
+      <stop offset="1" stop-color="#4a1290" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="decoflower-core" cx="90" cy="90" r="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff6c2" />
+      <stop offset="0.35" stop-color="#ffdc4d" />
+      <stop offset="0.72" stop-color="#f5b312" />
+      <stop offset="1" stop-color="#c07c02" />
+    </radialGradient>
+
+    <filter id="decoflower-soft" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="7" />
+    </filter>
+
+    <filter id="decoflower-tight" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="3" />
+    </filter>
+
+    <filter id="decoflower-drop" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+
+    <filter id="decoflower-grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="3" seed="63" result="decoflower-noise" />
+      <feColorMatrix in="decoflower-noise" type="saturate" values="0" result="decoflower-mono" />
+      <feComponentTransfer in="decoflower-mono">
+        <feFuncA type="linear" slope="0.14" />
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <!-- contact shadow -->
+  <ellipse cx="102" cy="188" rx="58" ry="11" fill="#000000" opacity="0.34" filter="url(#decoflower-drop)" />
+  <ellipse cx="100" cy="185" rx="38" ry="7" fill="#7b2fd6" opacity="0.3" filter="url(#decoflower-drop)" />
+
+  <g clip-path="url(#decoflower-clip)">
+    <rect x="0" y="0" width="200" height="200" fill="url(#decoflower-body)" />
+    <rect x="0" y="0" width="200" height="200" fill="url(#decoflower-deep)" />
+
+    <!-- petal seams: each petal edge shaded so the lobes read as separately inflated -->
+    <g fill="none" stroke="#2f0a63" stroke-opacity="0.55" stroke-width="10" filter="url(#decoflower-soft)">
+      <ellipse cx="100" cy="52" rx="36" ry="45" />
+      <ellipse cx="100" cy="52" rx="36" ry="45" transform="rotate(72 100 100)" />
+      <ellipse cx="100" cy="52" rx="36" ry="45" transform="rotate(144 100 100)" />
+      <ellipse cx="100" cy="52" rx="36" ry="45" transform="rotate(216 100 100)" />
+      <ellipse cx="100" cy="52" rx="36" ry="45" transform="rotate(288 100 100)" />
+    </g>
+
+    <!-- per-petal puff highlights -->
+    <g fill="#dcb2ff" opacity="0.4" filter="url(#decoflower-soft)">
+      <ellipse cx="94" cy="44" rx="20" ry="25" />
+      <ellipse cx="94" cy="44" rx="20" ry="25" transform="rotate(72 100 100)" />
+      <ellipse cx="94" cy="44" rx="20" ry="25" transform="rotate(144 100 100)" />
+      <ellipse cx="94" cy="44" rx="20" ry="25" transform="rotate(216 100 100)" />
+      <ellipse cx="94" cy="44" rx="20" ry="25" transform="rotate(288 100 100)" />
+    </g>
+
+    <rect x="0" y="0" width="200" height="200" filter="url(#decoflower-grain)" style="mix-blend-mode:overlay" />
+
+    <!-- global specular, offset up-left -->
+    <ellipse cx="66" cy="44" rx="26" ry="16" fill="#ffffff" opacity="0.55" filter="url(#decoflower-soft)" transform="rotate(-30 66 44)" />
+    <ellipse cx="60" cy="38" rx="8" ry="4.5" fill="#ffffff" opacity="0.9" filter="url(#decoflower-tight)" transform="rotate(-30 60 38)" />
+  </g>
+
+  <!-- yellow centre -->
+  <circle cx="100" cy="100" r="29" fill="#000000" opacity="0.35" filter="url(#decoflower-soft)" />
+  <circle cx="100" cy="100" r="28" fill="url(#decoflower-core)" />
+  <path d="M76 92 A28 28 0 0 1 118 76" fill="none" stroke="#fffbe0" stroke-opacity="0.85" stroke-width="5" stroke-linecap="round" filter="url(#decoflower-tight)" />
+  <ellipse cx="88" cy="88" rx="7" ry="4.5" fill="#ffffff" opacity="0.9" transform="rotate(-32 88 88)" />
+  <path d="M122 112 A28 28 0 0 1 92 127" fill="none" stroke="#8a5400" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round" filter="url(#decoflower-tight)" />
+</svg>

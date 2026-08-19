@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 190" width="280" height="190">
+  <!-- tile-05 — gallery tile: marbled honey-and-tangerine liquid flow -->
+  <defs>
+    <linearGradient id="tile05-bg" x1="0" y1="0.1" x2="1" y2="0.9">
+      <stop offset="0" stop-color="#ffe8a8"/>
+      <stop offset="0.45" stop-color="#ff8c1a"/>
+      <stop offset="1" stop-color="#4a1002"/>
+    </linearGradient>
+    <linearGradient id="tile05-flow-a" x1="0" y1="0" x2="1" y2="0.7">
+      <stop offset="0" stop-color="#fffbe0"/>
+      <stop offset="0.42" stop-color="#ffcf27"/>
+      <stop offset="1" stop-color="#e2670a"/>
+    </linearGradient>
+    <linearGradient id="tile05-flow-b" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#ffb35c"/>
+      <stop offset="0.5" stop-color="#f0490d"/>
+      <stop offset="1" stop-color="#6b0f06"/>
+    </linearGradient>
+    <linearGradient id="tile05-flow-c" x1="0" y1="0.3" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff6d2"/>
+      <stop offset="0.55" stop-color="#ffe07a"/>
+      <stop offset="1" stop-color="#c98a0c"/>
+    </linearGradient>
+    <radialGradient id="tile05-glow" cx="26%" cy="14%" r="66%">
+      <stop offset="0" stop-color="#fffdf0" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fffdf0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile05-bead" cx="34%" cy="27%" r="76%">
+      <stop offset="0" stop-color="#dbeaff"/>
+      <stop offset="0.34" stop-color="#3a7bff"/>
+      <stop offset="0.8" stop-color="#0f2a9c"/>
+      <stop offset="1" stop-color="#050b3a"/>
+    </radialGradient>
+    <radialGradient id="tile05-cream" cx="33%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.44" stop-color="#fff2d8"/>
+      <stop offset="0.84" stop-color="#d9b078"/>
+      <stop offset="1" stop-color="#78511e"/>
+    </radialGradient>
+    <radialGradient id="tile05-drop" cx="34%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#fff4c0"/>
+      <stop offset="0.3" stop-color="#ffbe15"/>
+      <stop offset="0.76" stop-color="#e0680a"/>
+      <stop offset="1" stop-color="#5d1a02"/>
+    </radialGradient>
+    <radialGradient id="tile05-spec">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile05-vig" cx="44%" cy="38%" r="78%">
+      <stop offset="0.48" stop-color="#3a0d01" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3a0d01" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="tile05-liquid" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.007 0.022" numOctaves="4" seed="5" result="tile05-noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="tile05-noise" scale="36" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+    <filter id="tile05-soft" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="tile05-shadow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="tile05-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.86" numOctaves="3" seed="53"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.48"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="280" height="190" fill="url(#tile05-bg)"/>
+
+  <!-- marbled ribbons -->
+  <g filter="url(#tile05-liquid)">
+    <ellipse cx="60" cy="30" rx="130" ry="52" fill="url(#tile05-flow-c)"/>
+    <ellipse cx="200" cy="80" rx="120" ry="48" fill="url(#tile05-flow-a)"/>
+    <ellipse cx="90" cy="140" rx="140" ry="54" fill="url(#tile05-flow-b)"/>
+    <ellipse cx="230" cy="182" rx="110" ry="44" fill="url(#tile05-flow-a)" opacity="0.9"/>
+    <ellipse cx="140" cy="98" rx="70" ry="24" fill="url(#tile05-flow-c)" opacity="0.75"/>
+  </g>
+
+  <rect width="280" height="190" fill="url(#tile05-glow)"/>
+
+  <!-- specular sheen along the flow -->
+  <g filter="url(#tile05-soft)" opacity="0.5">
+    <ellipse cx="88" cy="36" rx="60" ry="14" fill="#fffdf0"/>
+    <ellipse cx="196" cy="126" rx="48" ry="12" fill="#ffe3a0"/>
+  </g>
+
+  <!-- beads riding the surface -->
+  <g>
+    <ellipse cx="212" cy="66" rx="28" ry="7" fill="#4a1002" opacity="0.38" filter="url(#tile05-shadow)"/>
+    <circle cx="210" cy="46" r="26" fill="url(#tile05-drop)"/>
+    <ellipse cx="199" cy="34" rx="6.6" ry="4.4" fill="url(#tile05-spec)" transform="rotate(-30 199 34)"/>
+    <ellipse cx="195" cy="30" rx="2.4" ry="1.5" fill="#ffffff" opacity="0.95" transform="rotate(-30 195 30)"/>
+
+    <ellipse cx="66" cy="118" rx="24" ry="6" fill="#4a1002" opacity="0.38" filter="url(#tile05-shadow)"/>
+    <circle cx="64" cy="100" r="21" fill="url(#tile05-cream)"/>
+    <ellipse cx="55" cy="91" rx="5.4" ry="3.6" fill="url(#tile05-spec)" transform="rotate(-30 55 91)"/>
+
+    <circle cx="128" cy="158" r="17" fill="url(#tile05-bead)"/>
+    <ellipse cx="121" cy="151" rx="4.4" ry="2.9" fill="#ffffff" opacity="0.88" transform="rotate(-30 121 151)"/>
+
+    <circle cx="252" cy="140" r="11" fill="url(#tile05-bead)"/>
+    <circle cx="30" cy="60" r="9" fill="url(#tile05-bead)"/>
+    <circle cx="160" cy="24" r="8" fill="url(#tile05-cream)"/>
+    <circle cx="98" cy="72" r="6.5" fill="url(#tile05-drop)"/>
+  </g>
+
+  <!-- defocused foreground droplet -->
+  <circle cx="22" cy="172" r="20" fill="#ffcf27" opacity="0.5" filter="url(#tile05-shadow)"/>
+
+  <rect width="280" height="190" fill="url(#tile05-vig)"/>
+  <rect width="280" height="190" filter="url(#tile05-grain)" opacity="0.32" style="mix-blend-mode:overlay"/>
+</svg>

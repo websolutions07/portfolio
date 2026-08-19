@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Glossy lime green lightning bolt">
+  <defs>
+    <clipPath id="decobolt-clip">
+      <path d="M128 10 L44 112 L88 112 L72 190 L156 84 L110 84 Z" />
+    </clipPath>
+
+    <linearGradient id="decobolt-body" x1="52" y1="24" x2="150" y2="184" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f2ff9c" />
+      <stop offset="0.16" stop-color="#d8fb4e" />
+      <stop offset="0.42" stop-color="#a5e51c" />
+      <stop offset="0.7" stop-color="#6fbb0b" />
+      <stop offset="1" stop-color="#3d7c04" />
+    </linearGradient>
+
+    <radialGradient id="decobolt-deep" cx="150" cy="168" r="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22550a" stop-opacity="0.72" />
+      <stop offset="0.6" stop-color="#3a7a0c" stop-opacity="0.22" />
+      <stop offset="1" stop-color="#3a7a0c" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="decobolt-edge" x1="40" y1="60" x2="170" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.65" />
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="1" stop-color="#eaffb0" stop-opacity="0.4" />
+    </linearGradient>
+
+    <filter id="decobolt-soft" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="7" />
+    </filter>
+
+    <filter id="decobolt-tight" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="2.6" />
+    </filter>
+
+    <filter id="decobolt-drop" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+
+    <filter id="decobolt-grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="3" seed="97" result="decobolt-noise" />
+      <feColorMatrix in="decobolt-noise" type="saturate" values="0" result="decobolt-mono" />
+      <feComponentTransfer in="decobolt-mono">
+        <feFuncA type="linear" slope="0.14" />
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <!-- contact shadow -->
+  <ellipse cx="100" cy="190" rx="48" ry="9" fill="#000000" opacity="0.34" filter="url(#decobolt-drop)" />
+  <ellipse cx="92" cy="188" rx="30" ry="6" fill="#8ede1c" opacity="0.3" filter="url(#decobolt-drop)" />
+
+  <!-- body, rounded via a matching stroke so the corners read as inflated plastic -->
+  <path d="M128 10 L44 112 L88 112 L72 190 L156 84 L110 84 Z"
+        fill="url(#decobolt-body)" stroke="url(#decobolt-body)" stroke-width="14" stroke-linejoin="round" />
+
+  <g clip-path="url(#decobolt-clip)">
+    <rect x="0" y="0" width="200" height="200" fill="url(#decobolt-deep)" />
+    <rect x="0" y="0" width="200" height="200" fill="url(#decobolt-edge)" />
+
+    <!-- self shadow on the far side of the fold -->
+    <path d="M110 84 L156 84 L72 190 Z" fill="#2f6a06" opacity="0.4" filter="url(#decobolt-soft)" />
+
+    <rect x="0" y="0" width="200" height="200" filter="url(#decobolt-grain)" style="mix-blend-mode:overlay" />
+  </g>
+
+  <!-- bright yellow-green highlight running down the leading edge -->
+  <path d="M122 24 L56 106" fill="none" stroke="#f6ffc0" stroke-opacity="0.85" stroke-width="8" stroke-linecap="round" filter="url(#decobolt-tight)" />
+  <path d="M146 92 L82 172" fill="none" stroke="#e4ff86" stroke-opacity="0.45" stroke-width="6" stroke-linecap="round" filter="url(#decobolt-soft)" />
+
+  <!-- specular hot-spot offset from centre -->
+  <ellipse cx="104" cy="48" rx="10" ry="5.5" fill="#ffffff" opacity="0.9" filter="url(#decobolt-tight)" transform="rotate(-50 104 48)" />
+  <ellipse cx="101" cy="44" rx="4" ry="2.2" fill="#ffffff" transform="rotate(-50 101 44)" />
+</svg>

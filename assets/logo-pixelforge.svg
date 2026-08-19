@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90" width="220" height="90" role="img" aria-label="Pixel Forge">
+  <path d="M110 4 115 15h-10z" fill="#fff"/>
+  <g fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round">
+    <path d="M102 29Q110 7 118 29"/>
+    <path d="M96 39Q110 13 124 39"/>
+    <path d="M90 50Q110 22 130 50"/>
+  </g>
+  <text x="111.5" y="74" fill="#fff" text-anchor="middle"
+        font-family="Archivo, Helvetica, Arial, sans-serif"
+        font-size="18" font-weight="800" letter-spacing="3">PIXEL FORGE</text>
+</svg>

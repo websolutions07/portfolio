@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Puffy red heart">
+  <defs>
+    <clipPath id="decoheart-clip">
+      <path d="M100 178 C46 140 15 105 15 72 C15 43 38 22 63 22 C81 22 94 32 100 47 C106 32 119 22 137 22 C162 22 185 43 185 72 C185 105 154 140 100 178 Z" />
+    </clipPath>
+
+    <radialGradient id="decoheart-body" cx="66" cy="54" r="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff9083" />
+      <stop offset="0.2" stop-color="#fb5548" />
+      <stop offset="0.48" stop-color="#e81f36" />
+      <stop offset="0.78" stop-color="#b40d27" />
+      <stop offset="1" stop-color="#78041a" />
+    </radialGradient>
+
+    <radialGradient id="decoheart-deep" cx="150" cy="150" r="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5e0316" stop-opacity="0.8" />
+      <stop offset="0.55" stop-color="#8c0620" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#8c0620" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="decoheart-bounce" x1="30" y1="180" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff7d6e" stop-opacity="0.5" />
+      <stop offset="1" stop-color="#ff7d6e" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="decoheart-soft" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="8" />
+    </filter>
+
+    <filter id="decoheart-tight" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="3" />
+    </filter>
+
+    <filter id="decoheart-drop" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+
+    <filter id="decoheart-grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="3" seed="41" result="decoheart-noise" />
+      <feColorMatrix in="decoheart-noise" type="saturate" values="0" result="decoheart-mono" />
+      <feComponentTransfer in="decoheart-mono">
+        <feFuncA type="linear" slope="0.15" />
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <!-- contact shadow -->
+  <ellipse cx="102" cy="187" rx="52" ry="10" fill="#000000" opacity="0.35" filter="url(#decoheart-drop)" />
+  <ellipse cx="100" cy="184" rx="34" ry="7" fill="#c8102e" opacity="0.32" filter="url(#decoheart-drop)" />
+
+  <path d="M100 178 C46 140 15 105 15 72 C15 43 38 22 63 22 C81 22 94 32 100 47 C106 32 119 22 137 22 C162 22 185 43 185 72 C185 105 154 140 100 178 Z" fill="url(#decoheart-body)" />
+
+  <g clip-path="url(#decoheart-clip)">
+    <!-- crimson terminator on the lower right -->
+    <rect x="0" y="0" width="200" height="200" fill="url(#decoheart-deep)" />
+    <!-- warm bounce light from below left -->
+    <rect x="0" y="0" width="200" height="200" fill="url(#decoheart-bounce)" />
+
+    <!-- soft valley shadow in the cleft between the lobes -->
+    <ellipse cx="100" cy="46" rx="15" ry="26" fill="#7d0419" opacity="0.55" filter="url(#decoheart-soft)" />
+
+    <!-- puffed lobe highlights -->
+    <ellipse cx="62" cy="56" rx="34" ry="26" fill="#ff9d90" opacity="0.55" filter="url(#decoheart-soft)" transform="rotate(-22 62 56)" />
+    <ellipse cx="136" cy="58" rx="24" ry="17" fill="#ff8878" opacity="0.32" filter="url(#decoheart-soft)" transform="rotate(20 136 58)" />
+
+    <!-- rim light along the lower right edge -->
+    <path d="M185 72 C185 105 154 140 100 178" fill="none" stroke="#ff9a86" stroke-opacity="0.55" stroke-width="7" stroke-linecap="round" filter="url(#decoheart-soft)" />
+
+    <rect x="0" y="0" width="200" height="200" filter="url(#decoheart-grain)" style="mix-blend-mode:overlay" />
+
+    <!-- specular hot-spot, offset up-left of centre -->
+    <ellipse cx="58" cy="50" rx="19" ry="12" fill="#ffffff" opacity="0.8" filter="url(#decoheart-tight)" transform="rotate(-30 58 50)" />
+    <ellipse cx="52" cy="45" rx="7" ry="4" fill="#ffffff" opacity="0.95" transform="rotate(-30 52 45)" />
+    <!-- small secondary glint -->
+    <circle cx="79" cy="76" r="4" fill="#ffffff" opacity="0.4" filter="url(#decoheart-tight)" />
+  </g>
+</svg>

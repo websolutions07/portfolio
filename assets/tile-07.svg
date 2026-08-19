@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 190" width="280" height="190">
+  <!-- tile-07 — gallery tile: porous cellular lime cluster with magenta accents -->
+  <defs>
+    <linearGradient id="tile07-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0ffc0"/>
+      <stop offset="0.45" stop-color="#8ede1e"/>
+      <stop offset="1" stop-color="#123c06"/>
+    </linearGradient>
+    <radialGradient id="tile07-glow" cx="22%" cy="14%" r="70%">
+      <stop offset="0" stop-color="#fbffe6" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fbffe6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile07-cellA" cx="33%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#f8ffd6"/>
+      <stop offset="0.28" stop-color="#c2fb3c"/>
+      <stop offset="0.72" stop-color="#5ea80a"/>
+      <stop offset="1" stop-color="#1c3d02"/>
+    </radialGradient>
+    <radialGradient id="tile07-cellB" cx="34%" cy="27%" r="78%">
+      <stop offset="0" stop-color="#e2ffe8"/>
+      <stop offset="0.3" stop-color="#4fe08c"/>
+      <stop offset="0.74" stop-color="#118a4a"/>
+      <stop offset="1" stop-color="#032414"/>
+    </radialGradient>
+    <radialGradient id="tile07-cellC" cx="35%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.36" stop-color="#eaf7cc"/>
+      <stop offset="0.8" stop-color="#9cb86a"/>
+      <stop offset="1" stop-color="#3d4d1e"/>
+    </radialGradient>
+    <radialGradient id="tile07-pore" cx="42%" cy="38%" r="72%">
+      <stop offset="0" stop-color="#0d2a04" stop-opacity="0.85"/>
+      <stop offset="0.7" stop-color="#2c5a08" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#8fd42c" stop-opacity="0.15"/>
+    </radialGradient>
+    <radialGradient id="tile07-mag" cx="34%" cy="27%" r="76%">
+      <stop offset="0" stop-color="#ffd7f4"/>
+      <stop offset="0.34" stop-color="#ff2fb8"/>
+      <stop offset="0.82" stop-color="#9c0668"/>
+      <stop offset="1" stop-color="#33011f"/>
+    </radialGradient>
+    <radialGradient id="tile07-spec">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile07-vig" cx="46%" cy="40%" r="76%">
+      <stop offset="0.5" stop-color="#0a2103" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0a2103" stop-opacity="0.52"/>
+    </radialGradient>
+    <filter id="tile07-soft" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="tile07-shadow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+    <filter id="tile07-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.94" numOctaves="3" seed="71"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="280" height="190" fill="url(#tile07-bg)"/>
+  <rect width="280" height="190" fill="url(#tile07-glow)"/>
+
+  <!-- out-of-focus mass behind the cluster -->
+  <g filter="url(#tile07-soft)" opacity="0.8">
+    <ellipse cx="140" cy="96" rx="120" ry="80" fill="#7fd41a"/>
+    <circle cx="42" cy="30" r="26" fill="#e6ff92"/>
+    <circle cx="248" cy="164" r="30" fill="#0f6b2c"/>
+  </g>
+
+  <!-- pores / cavities -->
+  <g>
+    <circle cx="96" cy="70" r="15" fill="url(#tile07-pore)"/>
+    <circle cx="170" cy="118" r="13" fill="url(#tile07-pore)"/>
+    <circle cx="58" cy="132" r="11" fill="url(#tile07-pore)"/>
+    <circle cx="212" cy="60" r="10" fill="url(#tile07-pore)"/>
+    <circle cx="132" cy="160" r="9" fill="url(#tile07-pore)"/>
+  </g>
+
+  <!-- packed cells -->
+  <g>
+    <circle cx="40" cy="86" r="24" fill="url(#tile07-cellA)"/>
+    <ellipse cx="30" cy="75" rx="6" ry="4" fill="url(#tile07-spec)" transform="rotate(-30 30 75)"/>
+    <circle cx="76" cy="42" r="19" fill="url(#tile07-cellB)"/>
+    <ellipse cx="68" cy="34" rx="4.8" ry="3.2" fill="url(#tile07-spec)" transform="rotate(-30 68 34)"/>
+    <circle cx="126" cy="60" r="22" fill="url(#tile07-cellC)"/>
+    <ellipse cx="117" cy="50" rx="5.5" ry="3.7" fill="url(#tile07-spec)" transform="rotate(-30 117 50)"/>
+    <circle cx="66" cy="104" r="18" fill="url(#tile07-cellB)"/>
+    <circle cx="106" cy="106" r="26" fill="url(#tile07-cellA)"/>
+    <ellipse cx="95" cy="94" rx="6.5" ry="4.3" fill="url(#tile07-spec)" transform="rotate(-30 95 94)"/>
+    <circle cx="150" cy="88" r="16" fill="url(#tile07-cellB)"/>
+    <circle cx="186" cy="86" r="21" fill="url(#tile07-cellA)"/>
+    <ellipse cx="177" cy="77" rx="5.2" ry="3.5" fill="url(#tile07-spec)" transform="rotate(-30 177 77)"/>
+    <circle cx="222" cy="106" r="24" fill="url(#tile07-cellC)"/>
+    <ellipse cx="212" cy="95" rx="6" ry="4" fill="url(#tile07-spec)" transform="rotate(-30 212 95)"/>
+    <circle cx="248" cy="72" r="15" fill="url(#tile07-cellB)"/>
+    <circle cx="96" cy="146" r="20" fill="url(#tile07-cellC)"/>
+    <ellipse cx="88" cy="138" rx="5" ry="3.3" fill="url(#tile07-spec)" transform="rotate(-30 88 138)"/>
+    <circle cx="150" cy="140" r="17" fill="url(#tile07-cellA)"/>
+    <circle cx="188" cy="150" r="14" fill="url(#tile07-cellB)"/>
+    <circle cx="34" cy="152" r="16" fill="url(#tile07-cellA)"/>
+    <circle cx="62" cy="176" r="12" fill="url(#tile07-cellB)"/>
+    <circle cx="226" cy="164" r="13" fill="url(#tile07-cellA)"/>
+    <circle cx="164" cy="24" r="12" fill="url(#tile07-cellC)"/>
+    <circle cx="204" cy="30" r="9" fill="url(#tile07-cellB)"/>
+    <circle cx="16" cy="52" r="10" fill="url(#tile07-cellC)"/>
+    <circle cx="258" cy="140" r="10" fill="url(#tile07-cellB)"/>
+  </g>
+
+  <!-- magenta accent beads -->
+  <g>
+    <ellipse cx="140" cy="126" rx="16" ry="4.5" fill="#0f2d04" opacity="0.4" filter="url(#tile07-shadow)"/>
+    <circle cx="138" cy="112" r="14" fill="url(#tile07-mag)"/>
+    <ellipse cx="132" cy="106" rx="3.7" ry="2.4" fill="#ffffff" opacity="0.9" transform="rotate(-30 132 106)"/>
+    <circle cx="70" cy="66" r="8" fill="url(#tile07-mag)"/>
+    <circle cx="240" cy="40" r="7" fill="url(#tile07-mag)"/>
+    <circle cx="172" cy="176" r="9" fill="url(#tile07-mag)"/>
+  </g>
+
+  <rect width="280" height="190" fill="url(#tile07-vig)"/>
+  <rect width="280" height="190" filter="url(#tile07-grain)" opacity="0.32" style="mix-blend-mode:overlay"/>
+</svg>

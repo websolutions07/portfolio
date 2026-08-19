@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Illustrated portrait">
+  <defs>
+    <radialGradient id="av3-bg" cx="50%" cy="34%" r="76%">
+      <stop offset="0" stop-color="#f8e9de"/>
+      <stop offset="1" stop-color="#d2b39f"/>
+    </radialGradient>
+    <linearGradient id="av3-skin" x1="0.15" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#fbdcc4"/>
+      <stop offset="1" stop-color="#ecbb9a"/>
+    </linearGradient>
+    <linearGradient id="av3-cloth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f1ea"/>
+      <stop offset="1" stop-color="#d6d1c4"/>
+    </linearGradient>
+    <linearGradient id="av3-hair" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#a9522c"/>
+      <stop offset="1" stop-color="#7d3218"/>
+    </linearGradient>
+    <radialGradient id="av3-vig" cx="50%" cy="44%" r="72%">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.28"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#av3-bg)"/>
+  <path d="M6 200c0-34 38-54 94-54s94 20 94 54z" fill="url(#av3-cloth)"/>
+  <path d="M100 30c-28 0-47 20-47 48 0 36-5 76-14 130h36c-10-42-13-78-9-102 4-23 15-34 34-34s30 11 34 34c4 24 1 60-9 102h36c-9-54-14-94-14-130 0-28-19-48-47-48z"
+        fill="url(#av3-hair)"/>
+  <rect x="83" y="104" width="34" height="46" rx="15" fill="#e0ac8c"/>
+  <path d="M78 148c5 11 13 17 22 17s17-6 22-17" fill="none" stroke="#c2bcae"
+        stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="100" cy="84" rx="38" ry="44" fill="url(#av3-skin)"/>
+  <ellipse cx="87" cy="68" rx="21" ry="18" fill="#ffffff" opacity="0.14"/>
+  <path d="M62 80c0-26 17-42 38-42s38 16 38 42c-3-16-14-25-28-25-10 0-16 4-24 11-8 6-19 8-24 14z"
+        fill="url(#av3-hair)"/>
+  <g fill="#3a2a22">
+    <ellipse cx="86" cy="86" rx="3.4" ry="4"/>
+    <ellipse cx="114" cy="86" rx="3.4" ry="4"/>
+  </g>
+  <g fill="none" stroke="#6b3d24" stroke-width="2.8" stroke-linecap="round">
+    <path d="M78 74c5-4 12-4 16-1"/>
+    <path d="M122 74c-5-4-12-4-16-1"/>
+  </g>
+  <path d="M91 103c5 5 13 5 18 0" fill="none" stroke="#c4785c"
+        stroke-width="2.6" stroke-linecap="round"/>
+  <rect width="200" height="200" fill="url(#av3-vig)"/>
+</svg>

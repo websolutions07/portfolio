@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Facing semicircles">
+  <g fill="#f5a623">
+    <path d="M96 6 A94 94 0 0 0 96 194 Z" />
+    <path d="M104 6 A94 94 0 0 1 104 194 Z" />
+  </g>
+</svg>

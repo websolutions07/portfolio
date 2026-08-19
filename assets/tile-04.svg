@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 190" width="280" height="190">
+  <!-- tile-04 — gallery tile: two huge bubblegum-pink spheres on cream -->
+  <defs>
+    <linearGradient id="tile04-bg" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#fff2f6"/>
+      <stop offset="0.5" stop-color="#ffd3e6"/>
+      <stop offset="1" stop-color="#c8489e"/>
+    </linearGradient>
+    <radialGradient id="tile04-glow" cx="22%" cy="14%" r="70%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile04-gum" cx="33%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#ffe9f4"/>
+      <stop offset="0.28" stop-color="#ff8fc4"/>
+      <stop offset="0.72" stop-color="#e0248c"/>
+      <stop offset="1" stop-color="#5c0733"/>
+    </radialGradient>
+    <radialGradient id="tile04-mag" cx="34%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#ffd2f7"/>
+      <stop offset="0.3" stop-color="#f22fc0"/>
+      <stop offset="0.74" stop-color="#9c0a86"/>
+      <stop offset="1" stop-color="#33012f"/>
+    </radialGradient>
+    <radialGradient id="tile04-blob" cx="36%" cy="24%" r="82%">
+      <stop offset="0" stop-color="#fbd7ff"/>
+      <stop offset="0.34" stop-color="#c86bf5"/>
+      <stop offset="0.78" stop-color="#6a17b8"/>
+      <stop offset="1" stop-color="#230447"/>
+    </radialGradient>
+    <radialGradient id="tile04-yellow" cx="34%" cy="27%" r="76%">
+      <stop offset="0" stop-color="#fffbd0"/>
+      <stop offset="0.34" stop-color="#ffd016"/>
+      <stop offset="0.82" stop-color="#c67505"/>
+      <stop offset="1" stop-color="#4b2601"/>
+    </radialGradient>
+    <radialGradient id="tile04-bounce" cx="78%" cy="86%" r="44%">
+      <stop offset="0" stop-color="#ffd9ee" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffd9ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile04-spec">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile04-vig" cx="46%" cy="40%" r="76%">
+      <stop offset="0.52" stop-color="#3d0224" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3d0224" stop-opacity="0.45"/>
+    </radialGradient>
+    <filter id="tile04-soft" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="tile04-shadow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="tile04-melt" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.02" numOctaves="2" seed="9" result="tile04-noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="tile04-noise" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tile04-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.92" numOctaves="3" seed="41"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.44"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="280" height="190" fill="url(#tile04-bg)"/>
+  <rect width="280" height="190" fill="url(#tile04-glow)"/>
+
+  <!-- soft organic blob behind -->
+  <g filter="url(#tile04-melt)" opacity="0.95">
+    <ellipse cx="214" cy="150" rx="88" ry="62" fill="url(#tile04-blob)"/>
+  </g>
+
+  <!-- out-of-focus depth layer -->
+  <g filter="url(#tile04-soft)" opacity="0.7">
+    <circle cx="42" cy="24" r="28" fill="#ff8fc4"/>
+    <circle cx="252" cy="34" r="24" fill="#f22fc0"/>
+  </g>
+
+  <!-- magenta sphere -->
+  <ellipse cx="196" cy="106" rx="40" ry="11" fill="#4b0233" opacity="0.4" filter="url(#tile04-shadow)"/>
+  <g>
+    <circle cx="194" cy="62" r="44" fill="url(#tile04-mag)"/>
+    <circle cx="194" cy="62" r="44" fill="url(#tile04-bounce)"/>
+    <ellipse cx="176" cy="43" rx="12" ry="8" fill="url(#tile04-spec)" transform="rotate(-30 176 43)"/>
+    <ellipse cx="171" cy="38" rx="3.8" ry="2.4" fill="#ffffff" opacity="0.92" transform="rotate(-30 171 38)"/>
+  </g>
+
+  <!-- bubblegum hero sphere -->
+  <ellipse cx="86" cy="182" rx="58" ry="14" fill="#5c0733" opacity="0.42" filter="url(#tile04-shadow)"/>
+  <g>
+    <circle cx="84" cy="116" r="62" fill="url(#tile04-gum)"/>
+    <circle cx="84" cy="116" r="62" fill="url(#tile04-bounce)"/>
+    <ellipse cx="59" cy="88" rx="16.5" ry="11" fill="url(#tile04-spec)" transform="rotate(-28 59 88)"/>
+    <ellipse cx="52" cy="81" rx="5.2" ry="3.3" fill="#ffffff" opacity="0.93" transform="rotate(-28 52 81)"/>
+  </g>
+
+  <!-- yellow accent beads -->
+  <g>
+    <circle cx="146" cy="150" r="16" fill="url(#tile04-yellow)"/>
+    <ellipse cx="140" cy="143" rx="4" ry="2.7" fill="#ffffff" opacity="0.88" transform="rotate(-30 140 143)"/>
+    <circle cx="256" cy="118" r="10" fill="url(#tile04-yellow)"/>
+    <circle cx="36" cy="42" r="7.5" fill="url(#tile04-yellow)"/>
+    <circle cx="132" cy="30" r="9" fill="url(#tile04-blob)"/>
+  </g>
+
+  <!-- defocused foreground bead -->
+  <circle cx="248" cy="176" r="21" fill="#ff8fc4" opacity="0.55" filter="url(#tile04-shadow)"/>
+
+  <rect width="280" height="190" fill="url(#tile04-vig)"/>
+  <rect width="280" height="190" filter="url(#tile04-grain)" opacity="0.3" style="mix-blend-mode:overlay"/>
+</svg>

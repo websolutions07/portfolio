@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Hook">
+  <defs>
+    <mask id="shapehook-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+      <rect x="0" y="0" width="200" height="200" fill="#000000" />
+      <circle cx="100" cy="116" r="82" fill="#ffffff" />
+      <rect x="18" y="4" width="44" height="112" fill="#ffffff" />
+      <circle cx="158" cy="58" r="66" fill="#000000" />
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="200" height="200" fill="#ffffff" mask="url(#shapehook-mask)" />
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Illustrated portrait">
+  <defs>
+    <radialGradient id="av7-bg" cx="50%" cy="34%" r="76%">
+      <stop offset="0" stop-color="#f6e0ce"/>
+      <stop offset="1" stop-color="#c99d82"/>
+    </radialGradient>
+    <linearGradient id="av7-skin" x1="0.15" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#bb8155"/>
+      <stop offset="1" stop-color="#955c37"/>
+    </linearGradient>
+    <linearGradient id="av7-cloth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7c4480"/>
+      <stop offset="1" stop-color="#4b2650"/>
+    </linearGradient>
+    <linearGradient id="av7-hair" x1="0.2" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#2a2028"/>
+      <stop offset="1" stop-color="#141114"/>
+    </linearGradient>
+    <radialGradient id="av7-vig" cx="50%" cy="44%" r="72%">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.28"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#av7-bg)"/>
+  <path d="M6 200c0-34 38-54 94-54s94 20 94 54z" fill="url(#av7-cloth)"/>
+  <path d="M100 26c-30 0-50 21-50 51 0 38-6 80-15 133h38c-11-44-14-82-10-107 4-24 16-36 37-36s33 12 37 36c4 25 1 63-10 107h38c-9-53-15-95-15-133 0-30-20-51-50-51z"
+        fill="url(#av7-hair)"/>
+  <rect x="83" y="104" width="34" height="46" rx="15" fill="#85512f"/>
+  <path d="M78 148c5 11 13 17 22 17s17-6 22-17" fill="none" stroke="#3a1d3f"
+        stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="100" cy="84" rx="38" ry="44" fill="url(#av7-skin)"/>
+  <ellipse cx="87" cy="68" rx="21" ry="18" fill="#ffffff" opacity="0.1"/>
+  <path d="M100 38c-21 0-38 18-38 44 2-20 11-32 24-36 6-2 10-4 14-8z" fill="url(#av7-hair)"/>
+  <path d="M100 38c21 0 38 18 38 44-2-20-11-32-24-36-6-2-10-4-14-8z" fill="url(#av7-hair)"/>
+  <g fill="#140f0d">
+    <ellipse cx="86" cy="86" rx="3.4" ry="4"/>
+    <ellipse cx="114" cy="86" rx="3.4" ry="4"/>
+  </g>
+  <g fill="none" stroke="#1c1512" stroke-width="2.8" stroke-linecap="round">
+    <path d="M78 74c5-4 12-4 16-1"/>
+    <path d="M122 74c-5-4-12-4-16-1"/>
+  </g>
+  <path d="M91 103c5 5 13 5 18 0" fill="none" stroke="#6b3c22"
+        stroke-width="2.6" stroke-linecap="round"/>
+  <rect width="200" height="200" fill="url(#av7-vig)"/>
+</svg>

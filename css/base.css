@@ -1,0 +1,452 @@
+/* ==========================================================================
+   Base — reset, design tokens, shared primitives
+   ========================================================================== */
+
+:root {
+  --black: #000000;
+  --panel: #e9ecea;
+  --ink: #0a0a0a;
+  --ink-muted: #7c8583;
+  --white: #ffffff;
+  --white-muted: #b4b4b4;
+  --hairline: rgba(255, 255, 255, 0.22);
+  --hairline-ink: rgba(10, 10, 10, 0.25);
+  --send-blue: #3b3be8;
+
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-body: "Poppins", system-ui, sans-serif;
+  --font-label: "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+  --shell: 1240px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --panel-radius: 48px;
+
+  --pill: linear-gradient(
+    90deg,
+    #5b21f0 0%,
+    #b026d9 38%,
+    #ff2fa0 62%,
+    #ff9f5a 100%
+  );
+  --chrome: linear-gradient(
+    175deg,
+    #ffffff 0%,
+    #d8d8d8 18%,
+    #8f8f8f 38%,
+    #ffffff 55%,
+    #bdbdbd 72%,
+    #6f6f6f 88%,
+    #e8e8e8 100%
+  );
+}
+
+::selection {
+  background: rgba(255, 60, 160, 0.4);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060709;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262a34;
+  border-radius: 999px;
+  border: 2px solid #060709;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #454d5e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  /* `clip` — not `hidden` — because `hidden` makes body a scroll container,
+     which silently kills `position: sticky` on the project cards. */
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* --- layout ------------------------------------------------------------- */
+
+.shell {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Light panel sitting on the black page with big rounded top corners. */
+.panel-light {
+  background: var(--panel);
+  color: var(--ink);
+  border-radius: var(--panel-radius) var(--panel-radius) 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- shared type -------------------------------------------------------- */
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.94;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.label {
+  font-family: var(--font-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.chrome-text {
+  background: var(--chrome);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.65));
+}
+
+/* --- Awwwards-Tier Kinetic Letter-Split Heading Animation ---------------- */
+
+.reveal-fill {
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.reveal-fill .char {
+  display: inline-block;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform, color, -webkit-text-stroke, text-shadow, filter;
+  transition: transform 0.8s cubic-bezier(0.2, 1.25, 0.35, 1),
+    color 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    -webkit-text-stroke 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    text-shadow 0.85s ease,
+    filter 0.85s ease,
+    opacity 0.6s ease;
+  transition-delay: calc(var(--char-idx, 0) * 0.035s);
+  cursor: default;
+}
+
+.reveal-fill .char--space {
+  width: 0.28em;
+}
+
+.reveal-fill .char--emoji {
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.8s cubic-bezier(0.2, 1.25, 0.35, 1), opacity 0.6s ease;
+  transition-delay: calc(var(--char-idx, 0) * 0.035s);
+}
+
+/* 1. INITIAL STATE: Crisp Luminous Outline Stroke Only, Floating 3D Tilt */
+.js-reveal .reveal-fill.on-dark .char {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.48);
+  transform: perspective(800px) rotateX(42deg) translateY(22px) translateZ(-15px);
+  opacity: 0.55;
+  text-shadow: 0 0 0 transparent;
+}
+
+.js-reveal .reveal-fill.on-light .char {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(10, 10, 10, 0.45);
+  transform: perspective(800px) rotateX(42deg) translateY(22px) translateZ(-15px);
+  opacity: 0.55;
+  text-shadow: 0 0 0 transparent;
+}
+
+/* 2. SCROLL ENTER TRIGGER (.is-filled): Kinetic Rise & Specular Reflection Fill */
+.reveal-fill.on-dark.is-filled .char {
+  color: #ffffff;
+  -webkit-text-stroke: 0px transparent;
+  transform: perspective(800px) rotateX(0deg) translateY(0) translateZ(0);
+  opacity: 1;
+  text-shadow: 0 0 32px rgba(255, 255, 255, 0.8), 0 8px 45px rgba(255, 56, 198, 0.45);
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.85));
+}
+
+.reveal-fill.on-light.is-filled .char {
+  color: var(--ink);
+  -webkit-text-stroke: 0px transparent;
+  transform: perspective(800px) rotateX(0deg) translateY(0) translateZ(0);
+  opacity: 1;
+  text-shadow: 0 6px 24px rgba(10, 10, 10, 0.16);
+}
+
+/* 3. INTERACTIVE MOUSE HOVER RIPPLE / KINETIC WAVE */
+.reveal-fill.is-filled .char:hover {
+  transform: perspective(800px) translateY(-10px) rotateY(14deg) scale(1.12);
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+}
+
+.reveal-fill.on-dark.is-filled .char:hover {
+  color: #ff38c6;
+  text-shadow: 0 0 45px rgba(255, 56, 198, 0.95), 0 0 80px rgba(35, 232, 120, 0.6);
+  filter: drop-shadow(0 10px 25px rgba(255, 56, 198, 0.5));
+}
+
+.reveal-fill.on-light.is-filled .char:hover {
+  color: #3b3be8;
+  text-shadow: 0 4px 30px rgba(59, 59, 232, 0.35);
+}
+
+/* 4. AMBIENT PULSE */
+@keyframes text-chrome-pulse {
+  0% {
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.6), 0 6px 28px rgba(255, 56, 198, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 42px rgba(255, 255, 255, 0.95), 0 10px 48px rgba(35, 232, 120, 0.4);
+  }
+}
+
+/* --- gradient pill button ----------------------------------------------- */
+
+.pill-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 34px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--pill);
+  color: var(--white);
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 28px rgba(180, 40, 220, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pill-cta::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.pill-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px rgba(200, 50, 235, 0.65);
+}
+
+/* --- outline pill (LIVE PROJECT / SEND) --------------------------------- */
+
+.pill-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.pill-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- marquee primitive --------------------------------------------------- */
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-left var(--marquee-duration, 40s) linear infinite;
+  /* Held until js/main.js clones the items — a half-width track would jump. */
+  animation-play-state: paused;
+}
+
+.marquee__track.is-doubled {
+  animation-play-state: running;
+}
+
+.marquee__track--reverse {
+  animation-name: marquee-right;
+}
+
+.marquee:hover .marquee__track--pausable {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* --- top scroll progress indicator -------------------------------------- */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3.5px;
+  background: linear-gradient(90deg, #23e878 0%, #ff38c6 50%, #3b3be8 100%);
+  z-index: 9999;
+  box-shadow: 0 0 14px rgba(255, 56, 198, 0.8);
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* --- floating 3D decorations -------------------------------------------- */
+
+.deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  animation: bob var(--bob-duration, 7s) ease-in-out infinite;
+  animation-delay: var(--bob-delay, 0s);
+  z-index: 2;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(calc(var(--scroll-y, 0px) - 12px)) rotate(calc(var(--bob-rot, 0deg) + var(--scroll-rot, 0deg)));
+  }
+  50% {
+    transform: translateY(calc(var(--scroll-y, 0px) + 12px)) rotate(calc(var(--bob-rot, 0deg) * -1 + var(--scroll-rot, 0deg)));
+  }
+}
+
+/* --- section entry reveal ------------------------------------------------ */
+
+.js-reveal .rise {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--rise-delay, 0s);
+}
+
+.rise.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- motion preferences -------------------------------------------------- */
+
+@media (max-width: 719px) {
+  :root {
+    --panel-radius: 28px;
+    --gutter: 18px;
+  }
+
+  body {
+    font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee__track,
+  .deco {
+    animation: none !important;
+  }
+
+  .rise {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .reveal-fill {
+    transition: none;
+  }
+}

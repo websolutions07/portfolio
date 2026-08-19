@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Illustrated portrait">
+  <defs>
+    <radialGradient id="av1-bg" cx="50%" cy="34%" r="76%">
+      <stop offset="0" stop-color="#f3e3d0"/>
+      <stop offset="1" stop-color="#c7a98c"/>
+    </radialGradient>
+    <linearGradient id="av1-skin" x1="0.15" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#f2cba3"/>
+      <stop offset="1" stop-color="#d69f74"/>
+    </linearGradient>
+    <linearGradient id="av1-cloth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b3d5c"/>
+      <stop offset="1" stop-color="#16223a"/>
+    </linearGradient>
+    <radialGradient id="av1-vig" cx="50%" cy="44%" r="72%">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.3"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#av1-bg)"/>
+  <path d="M6 200c0-34 38-54 94-54s94 20 94 54z" fill="url(#av1-cloth)"/>
+  <rect x="83" y="104" width="34" height="46" rx="15" fill="#c48f66"/>
+  <path d="M78 148c5 11 13 17 22 17s17-6 22-17" fill="none" stroke="#101a2c"
+        stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="100" cy="78" rx="42" ry="46" fill="#3a2a1f"/>
+  <ellipse cx="62" cy="88" rx="6" ry="8" fill="#d69f74"/>
+  <ellipse cx="138" cy="88" rx="6" ry="8" fill="#d69f74"/>
+  <ellipse cx="100" cy="84" rx="38" ry="44" fill="url(#av1-skin)"/>
+  <ellipse cx="87" cy="68" rx="21" ry="18" fill="#ffffff" opacity="0.1"/>
+  <path d="M62 78c0-26 17-42 38-42s38 16 38 42c-5-14-16-21-31-21-8 0-14 2-21 7-9 6-18 8-24 14z"
+        fill="#3a2a1f"/>
+  <g fill="#2a1d14">
+    <ellipse cx="86" cy="86" rx="3.4" ry="4"/>
+    <ellipse cx="114" cy="86" rx="3.4" ry="4"/>
+  </g>
+  <g fill="none" stroke="#33251a" stroke-width="3" stroke-linecap="round">
+    <path d="M78 74c5-4 12-4 16-1"/>
+    <path d="M122 74c-5-4-12-4-16-1"/>
+  </g>
+  <path d="M91 104c5 4 13 4 18 0" fill="none" stroke="#a9613e"
+        stroke-width="2.6" stroke-linecap="round"/>
+  <rect width="200" height="200" fill="url(#av1-vig)"/>
+</svg>

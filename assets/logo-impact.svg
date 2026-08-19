@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90" width="220" height="90" role="img" aria-label="Impact Creative">
+  <defs>
+    <pattern id="impact-hatch" width="7" height="7" patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#fff" stroke-width="2.2"/>
+    </pattern>
+  </defs>
+  <rect x="18" y="23" width="44" height="44" fill="url(#impact-hatch)"/>
+  <rect x="18" y="23" width="44" height="44" fill="none" stroke="#fff" stroke-width="2.4"/>
+  <text x="76" y="43" fill="#fff"
+        font-family="Archivo, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="500" letter-spacing="-0.1">Impact</text>
+  <text x="76" y="66" fill="#fff"
+        font-family="Archivo, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="800" letter-spacing="-0.1">Creative</text>
+</svg>

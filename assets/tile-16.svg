@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 190" width="280" height="190">
+  <!-- tile-16 — gallery tile: porous magenta-violet cluster with acid-green accents -->
+  <defs>
+    <linearGradient id="tile16-bg" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#ffb0e2"/>
+      <stop offset="0.42" stop-color="#c41abc"/>
+      <stop offset="1" stop-color="#2a0342"/>
+    </linearGradient>
+    <radialGradient id="tile16-glow" cx="24%" cy="14%" r="70%">
+      <stop offset="0" stop-color="#ffe8f8" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffe8f8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile16-cellA" cx="32%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#ffe0f6"/>
+      <stop offset="0.28" stop-color="#ff45c0"/>
+      <stop offset="0.72" stop-color="#a30a76"/>
+      <stop offset="1" stop-color="#320124"/>
+    </radialGradient>
+    <radialGradient id="tile16-cellB" cx="33%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#eeddff"/>
+      <stop offset="0.3" stop-color="#9a48f0"/>
+      <stop offset="0.74" stop-color="#4a0f9c"/>
+      <stop offset="1" stop-color="#16022e"/>
+    </radialGradient>
+    <radialGradient id="tile16-cellC" cx="34%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.36" stop-color="#ffe6f2"/>
+      <stop offset="0.8" stop-color="#c496b4"/>
+      <stop offset="1" stop-color="#4c2c42"/>
+    </radialGradient>
+    <radialGradient id="tile16-pore" cx="42%" cy="38%" r="72%">
+      <stop offset="0" stop-color="#1c0326" stop-opacity="0.88"/>
+      <stop offset="0.7" stop-color="#4c0a56" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#c41abc" stop-opacity="0.14"/>
+    </radialGradient>
+    <radialGradient id="tile16-lime" cx="34%" cy="27%" r="76%">
+      <stop offset="0" stop-color="#f6ffd4"/>
+      <stop offset="0.34" stop-color="#b4ff2e"/>
+      <stop offset="0.82" stop-color="#4e9004"/>
+      <stop offset="1" stop-color="#173001"/>
+    </radialGradient>
+    <radialGradient id="tile16-spec">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile16-vig" cx="46%" cy="40%" r="76%">
+      <stop offset="0.5" stop-color="#1a0228" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1a0228" stop-opacity="0.58"/>
+    </radialGradient>
+    <filter id="tile16-soft" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="11"/>
+    </filter>
+    <filter id="tile16-shadow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+    <filter id="tile16-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.94" numOctaves="3" seed="163"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="280" height="190" fill="url(#tile16-bg)"/>
+  <rect width="280" height="190" fill="url(#tile16-glow)"/>
+
+  <!-- out-of-focus mass behind -->
+  <g filter="url(#tile16-soft)" opacity="0.8">
+    <ellipse cx="140" cy="100" rx="124" ry="82" fill="#8e18a8"/>
+    <circle cx="46" cy="24" r="26" fill="#ffb0e2"/>
+    <circle cx="252" cy="170" r="30" fill="#2a0342"/>
+  </g>
+
+  <!-- pores -->
+  <g>
+    <circle cx="82" cy="60" r="16" fill="url(#tile16-pore)"/>
+    <circle cx="164" cy="102" r="14" fill="url(#tile16-pore)"/>
+    <circle cx="230" cy="52" r="11" fill="url(#tile16-pore)"/>
+    <circle cx="56" cy="144" r="12" fill="url(#tile16-pore)"/>
+    <circle cx="170" cy="170" r="10" fill="url(#tile16-pore)"/>
+    <circle cx="124" cy="126" r="9" fill="url(#tile16-pore)"/>
+  </g>
+
+  <!-- packed cells of mixed scale -->
+  <g>
+    <circle cx="36" cy="74" r="26" fill="url(#tile16-cellA)"/>
+    <ellipse cx="25" cy="62" rx="6.5" ry="4.3" fill="url(#tile16-spec)" transform="rotate(-30 25 62)"/>
+    <circle cx="84" cy="26" r="20" fill="url(#tile16-cellB)"/>
+    <ellipse cx="76" cy="18" rx="5" ry="3.3" fill="url(#tile16-spec)" transform="rotate(-30 76 18)"/>
+    <circle cx="128" cy="60" r="27" fill="url(#tile16-cellB)"/>
+    <ellipse cx="117" cy="48" rx="6.8" ry="4.5" fill="url(#tile16-spec)" transform="rotate(-30 117 48)"/>
+    <circle cx="70" cy="102" r="22" fill="url(#tile16-cellC)"/>
+    <ellipse cx="61" cy="93" rx="5.5" ry="3.7" fill="url(#tile16-spec)" transform="rotate(-30 61 93)"/>
+    <circle cx="112" cy="102" r="17" fill="url(#tile16-cellA)"/>
+    <circle cx="176" cy="66" r="24" fill="url(#tile16-cellA)"/>
+    <ellipse cx="166" cy="55" rx="6" ry="4" fill="url(#tile16-spec)" transform="rotate(-30 166 55)"/>
+    <circle cx="214" cy="102" r="28" fill="url(#tile16-cellB)"/>
+    <ellipse cx="202" cy="90" rx="7" ry="4.6" fill="url(#tile16-spec)" transform="rotate(-30 202 90)"/>
+    <circle cx="256" cy="82" r="16" fill="url(#tile16-cellC)"/>
+    <circle cx="94" cy="152" r="24" fill="url(#tile16-cellA)"/>
+    <ellipse cx="84" cy="142" rx="6" ry="4" fill="url(#tile16-spec)" transform="rotate(-30 84 142)"/>
+    <circle cx="140" cy="154" r="18" fill="url(#tile16-cellC)"/>
+    <circle cx="200" cy="146" r="20" fill="url(#tile16-cellA)"/>
+    <ellipse cx="192" cy="138" rx="5" ry="3.3" fill="url(#tile16-spec)" transform="rotate(-30 192 138)"/>
+    <circle cx="244" cy="164" r="15" fill="url(#tile16-cellB)"/>
+    <circle cx="30" cy="130" r="14" fill="url(#tile16-cellB)"/>
+    <circle cx="44" cy="176" r="12" fill="url(#tile16-cellC)"/>
+    <circle cx="152" cy="26" r="11" fill="url(#tile16-cellC)"/>
+    <circle cx="212" cy="24" r="10" fill="url(#tile16-cellA)"/>
+    <circle cx="266" cy="130" r="10" fill="url(#tile16-cellA)"/>
+  </g>
+
+  <!-- acid-green accent beads -->
+  <g>
+    <ellipse cx="150" cy="128" rx="16" ry="4.5" fill="#1c0326" opacity="0.42" filter="url(#tile16-shadow)"/>
+    <circle cx="148" cy="114" r="15" fill="url(#tile16-lime)"/>
+    <ellipse cx="142" cy="108" rx="3.9" ry="2.6" fill="#ffffff" opacity="0.9" transform="rotate(-30 142 108)"/>
+    <circle cx="58" cy="46" r="9" fill="url(#tile16-lime)"/>
+    <circle cx="234" cy="126" r="7.5" fill="url(#tile16-lime)"/>
+    <circle cx="116" cy="180" r="8" fill="url(#tile16-lime)"/>
+  </g>
+
+  <rect width="280" height="190" fill="url(#tile16-vig)"/>
+  <rect width="280" height="190" filter="url(#tile16-grain)" opacity="0.32" style="mix-blend-mode:overlay"/>
+</svg>

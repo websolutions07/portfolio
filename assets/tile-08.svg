@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 190" width="280" height="190">
+  <!-- tile-08 — gallery tile: magenta foam of translucent bubbles over deep purple -->
+  <defs>
+    <linearGradient id="tile08-bg" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#ff5fd0"/>
+      <stop offset="0.46" stop-color="#a411b8"/>
+      <stop offset="1" stop-color="#210438"/>
+    </linearGradient>
+    <radialGradient id="tile08-glow" cx="24%" cy="16%" r="68%">
+      <stop offset="0" stop-color="#ffd4f6" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffd4f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile08-foam">
+      <stop offset="0.5" stop-color="#ffb7ef" stop-opacity="0.08"/>
+      <stop offset="0.82" stop-color="#ffd0f6" stop-opacity="0.32"/>
+      <stop offset="0.96" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.2"/>
+    </radialGradient>
+    <radialGradient id="tile08-solid" cx="33%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#ffe4f8"/>
+      <stop offset="0.28" stop-color="#ff56c8"/>
+      <stop offset="0.72" stop-color="#b00c88"/>
+      <stop offset="1" stop-color="#3a012c"/>
+    </radialGradient>
+    <radialGradient id="tile08-violet" cx="34%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#eddaff"/>
+      <stop offset="0.3" stop-color="#9a4bf5"/>
+      <stop offset="0.76" stop-color="#4a0ea8"/>
+      <stop offset="1" stop-color="#170132"/>
+    </radialGradient>
+    <radialGradient id="tile08-cream" cx="33%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.42" stop-color="#fff2e2"/>
+      <stop offset="0.84" stop-color="#d8bcc8"/>
+      <stop offset="1" stop-color="#6b4a5c"/>
+    </radialGradient>
+    <radialGradient id="tile08-spec">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tile08-vig" cx="46%" cy="40%" r="76%">
+      <stop offset="0.5" stop-color="#16022a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#16022a" stop-opacity="0.58"/>
+    </radialGradient>
+    <filter id="tile08-soft" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="tile08-shadow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <filter id="tile08-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.96" numOctaves="3" seed="83"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="280" height="190" fill="url(#tile08-bg)"/>
+  <rect width="280" height="190" fill="url(#tile08-glow)"/>
+
+  <!-- out-of-focus foam behind -->
+  <g filter="url(#tile08-soft)" opacity="0.8">
+    <circle cx="56" cy="46" r="34" fill="#ff86dd"/>
+    <circle cx="222" cy="140" r="38" fill="#6b12a8"/>
+    <circle cx="250" cy="36" r="22" fill="#ffb7ef" opacity="0.8"/>
+  </g>
+
+  <!-- solid beads inside the foam -->
+  <g>
+    <circle cx="72" cy="118" r="27" fill="url(#tile08-solid)"/>
+    <ellipse cx="61" cy="106" rx="6.8" ry="4.5" fill="url(#tile08-spec)" transform="rotate(-30 61 106)"/>
+    <circle cx="118" cy="82" r="21" fill="url(#tile08-violet)"/>
+    <ellipse cx="109" cy="73" rx="5.3" ry="3.5" fill="url(#tile08-spec)" transform="rotate(-30 109 73)"/>
+    <circle cx="168" cy="128" r="24" fill="url(#tile08-solid)"/>
+    <ellipse cx="158" cy="117" rx="6" ry="4" fill="url(#tile08-spec)" transform="rotate(-30 158 117)"/>
+    <circle cx="212" cy="76" r="19" fill="url(#tile08-violet)"/>
+    <circle cx="40" cy="66" r="15" fill="url(#tile08-violet)"/>
+    <circle cx="146" cy="38" r="14" fill="url(#tile08-solid)"/>
+    <circle cx="104" cy="160" r="16" fill="url(#tile08-violet)"/>
+    <circle cx="250" cy="112" r="13" fill="url(#tile08-solid)"/>
+    <circle cx="26" cy="150" r="11" fill="url(#tile08-solid)"/>
+    <circle cx="196" cy="176" r="12" fill="url(#tile08-violet)"/>
+  </g>
+
+  <!-- translucent foam bubbles -->
+  <g>
+    <circle cx="94" cy="52" r="26" fill="url(#tile08-foam)"/>
+    <ellipse cx="82" cy="40" rx="5.6" ry="3.7" fill="#ffffff" opacity="0.8" transform="rotate(-30 82 40)"/>
+    <circle cx="146" cy="98" r="22" fill="url(#tile08-foam)"/>
+    <ellipse cx="136" cy="88" rx="4.8" ry="3.2" fill="#ffffff" opacity="0.75" transform="rotate(-30 136 88)"/>
+    <circle cx="52" cy="164" r="20" fill="url(#tile08-foam)"/>
+    <circle cx="204" cy="118" r="18" fill="url(#tile08-foam)"/>
+    <ellipse cx="196" cy="110" rx="3.9" ry="2.6" fill="#ffffff" opacity="0.75" transform="rotate(-30 196 110)"/>
+    <circle cx="240" cy="164" r="16" fill="url(#tile08-foam)"/>
+    <circle cx="182" cy="30" r="15" fill="url(#tile08-foam)"/>
+    <circle cx="136" cy="166" r="13" fill="url(#tile08-foam)"/>
+    <circle cx="18" cy="100" r="14" fill="url(#tile08-foam)"/>
+    <circle cx="266" cy="66" r="12" fill="url(#tile08-foam)"/>
+  </g>
+
+  <!-- cream accent beads -->
+  <g>
+    <ellipse cx="222" cy="46" rx="18" ry="5" fill="#1c0230" opacity="0.4" filter="url(#tile08-shadow)"/>
+    <circle cx="220" cy="32" r="16" fill="url(#tile08-cream)"/>
+    <ellipse cx="213" cy="25" rx="4.2" ry="2.8" fill="url(#tile08-spec)" transform="rotate(-30 213 25)"/>
+    <circle cx="76" cy="24" r="9" fill="url(#tile08-cream)"/>
+    <circle cx="160" cy="66" r="7" fill="url(#tile08-cream)"/>
+    <circle cx="70" cy="182" r="8" fill="url(#tile08-cream)"/>
+  </g>
+
+  <rect width="280" height="190" fill="url(#tile08-vig)"/>
+  <rect width="280" height="190" filter="url(#tile08-grain)" opacity="0.32" style="mix-blend-mode:overlay"/>
+</svg>

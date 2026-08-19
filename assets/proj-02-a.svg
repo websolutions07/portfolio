@@ -1,0 +1,321 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" role="img" aria-label="Miniature 3D diorama village with terracotta-roofed cottages, a chapel, rounded trees and a river in late afternoon light">
+  <defs>
+    <linearGradient id="p02a-sky" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#f7d7f0"/>
+      <stop offset="0.24" stop-color="#ffd9a8"/>
+      <stop offset="0.58" stop-color="#ffc482"/>
+      <stop offset="0.85" stop-color="#f9b487"/>
+      <stop offset="1" stop-color="#eeae8e"/>
+    </linearGradient>
+    <radialGradient id="p02a-sun" cx="0.79" cy="0.11" r="0.52">
+      <stop offset="0" stop-color="#fffdf0" stop-opacity="0.95"/>
+      <stop offset="0.22" stop-color="#ffeec0" stop-opacity="0.6"/>
+      <stop offset="0.6" stop-color="#ffd9a0" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffd9a0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="p02a-ground" x1="0.2" y1="0" x2="0.05" y2="1">
+      <stop offset="0" stop-color="#a8c46a"/>
+      <stop offset="0.3" stop-color="#7fa84c"/>
+      <stop offset="0.68" stop-color="#547f36"/>
+      <stop offset="1" stop-color="#2f5324"/>
+    </linearGradient>
+    <linearGradient id="p02a-water" x1="0.1" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#dcefe6"/>
+      <stop offset="0.2" stop-color="#8fcada"/>
+      <stop offset="0.55" stop-color="#3d94b0"/>
+      <stop offset="0.85" stop-color="#236f8e"/>
+      <stop offset="1" stop-color="#17516d"/>
+    </linearGradient>
+    <linearGradient id="p02a-wall-front" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0" stop-color="#e9d5b2"/>
+      <stop offset="0.55" stop-color="#f7e8cd"/>
+      <stop offset="1" stop-color="#fdf5e4"/>
+    </linearGradient>
+    <linearGradient id="p02a-wall-side" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0" stop-color="#fff8ea"/>
+      <stop offset="1" stop-color="#ecd6b0"/>
+    </linearGradient>
+    <linearGradient id="p02a-gable" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dcc59f"/>
+      <stop offset="1" stop-color="#f4e4c8"/>
+    </linearGradient>
+    <linearGradient id="p02a-roof" x1="0.1" y1="1" x2="0.8" y2="0">
+      <stop offset="0" stop-color="#b8451f"/>
+      <stop offset="0.42" stop-color="#dd7038"/>
+      <stop offset="0.78" stop-color="#f0975a"/>
+      <stop offset="1" stop-color="#ffbe86"/>
+    </linearGradient>
+    <linearGradient id="p02a-roof-sheen" x1="0" y1="1" x2="0.6" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.75" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="p02a-trunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#432716"/>
+      <stop offset="0.6" stop-color="#7a4a29"/>
+      <stop offset="1" stop-color="#a06b3d"/>
+    </linearGradient>
+    <radialGradient id="p02a-foliage-shade" cx="0.7" cy="0.26" r="0.8">
+      <stop offset="0.35" stop-color="#062012" stop-opacity="0"/>
+      <stop offset="0.74" stop-color="#062012" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#03150c" stop-opacity="0.62"/>
+    </radialGradient>
+    <radialGradient id="p02a-foliage-hi" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff3c8" stop-opacity="0.66"/>
+      <stop offset="0.55" stop-color="#e4f0a2" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#e4f0a2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="p02a-glow" cx="0.4" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#fff6d0"/>
+      <stop offset="0.6" stop-color="#ffd06a"/>
+      <stop offset="1" stop-color="#e08a26"/>
+    </radialGradient>
+    <linearGradient id="p02a-tent" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0" stop-color="#7d2f1c"/>
+      <stop offset="0.6" stop-color="#b5502c"/>
+      <stop offset="1" stop-color="#d97a48"/>
+    </linearGradient>
+    <linearGradient id="p02a-track" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b79466"/>
+      <stop offset="0.5" stop-color="#dcc194"/>
+      <stop offset="1" stop-color="#a88656"/>
+    </linearGradient>
+    <radialGradient id="p02a-vignette" cx="0.52" cy="0.42" r="0.8">
+      <stop offset="0.48" stop-color="#100603" stop-opacity="0"/>
+      <stop offset="1" stop-color="#100603" stop-opacity="0.45"/>
+    </radialGradient>
+
+    <filter id="p02a-shadow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <filter id="p02a-blur-far" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="p02a-blur-soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="p02a-blur-bokeh" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="17"/>
+    </filter>
+    <filter id="p02a-organic" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.026" numOctaves="3" seed="31" result="p02a-n"/>
+      <feDisplacementMap in="SourceGraphic" in2="p02a-n" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="p02a-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.88" numOctaves="3" seed="17" result="p02a-g"/>
+      <feColorMatrix in="p02a-g" type="matrix"
+        values="0 0 0 0 0.66  0 0 0 0 0.6  0 0 0 0 0.48  1.1 0 0 0 -0.54"/>
+    </filter>
+
+    <!-- cottage: cream render walls, terracotta tiled roof, sun from upper right -->
+    <g id="p02a-cottage">
+      <g filter="url(#p02a-shadow)" opacity="0.42">
+        <polygon points="4,2 66,2 -12,30 -76,30" fill="#173a1c"/>
+        <ellipse cx="46" cy="1" rx="52" ry="8" fill="#0f2c15"/>
+      </g>
+      <polygon points="0,0 64,0 64,-46 0,-46" fill="url(#p02a-wall-front)"/>
+      <polygon points="64,0 88,-15 88,-61 64,-46" fill="url(#p02a-wall-side)"/>
+      <polygon points="0,0 64,0 64,-5 0,-5" fill="#c9b28c" opacity="0.75"/>
+      <polygon points="0,-46 32,-76 64,-46" fill="url(#p02a-gable)"/>
+      <polygon points="-6,-42 32,-80 32,-75 0,-45" fill="#9c3a19"/>
+      <polygon points="69,-44 93,-59 56,-93 32,-78" fill="url(#p02a-roof)"/>
+      <g stroke="#8f3313" stroke-opacity="0.42" stroke-width="1.5" fill="none">
+        <path d="M61.6-50.8 85.6-65.8"/>
+        <path d="M54.2-57.6 78.2-72.6"/>
+        <path d="M46.8-64.4 70.8-79.4"/>
+        <path d="M39.4-71.2 63.4-86.2"/>
+      </g>
+      <polygon points="69,-44 93,-59 56,-93 32,-78" fill="url(#p02a-roof-sheen)"/>
+      <path d="M-6-42 32-80 70-42" stroke="#c2542a" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+      <path d="M32-79 56-94" stroke="#ffb583" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <g>
+        <polygon points="60,-78 70,-78 70,-100 60,-100" fill="#e6d0ab"/>
+        <polygon points="70,-78 77,-82 77,-104 70,-100" fill="#c9ac82"/>
+        <polygon points="58,-100 72,-100 79,-104 65,-104" fill="#a8431f"/>
+      </g>
+      <g stroke="#c9ab7f" stroke-width="2">
+        <rect x="8" y="-40" width="14" height="15" rx="1.5" fill="url(#p02a-glow)"/>
+        <rect x="42" y="-40" width="14" height="15" rx="1.5" fill="url(#p02a-glow)"/>
+      </g>
+      <path d="M15-40 15-25M8-32.5 22-32.5M49-40 49-25M42-32.5 56-32.5" stroke="#c9ab7f" stroke-width="1.4"/>
+      <polygon points="70,-26 80,-32 80,-45 70,-39" fill="url(#p02a-glow)" stroke="#c9ab7f" stroke-width="1.6"/>
+      <path d="M26 0 26-19A7 7 0 0 1 40-19L40 0Z" fill="#6b3d21"/>
+      <path d="M27-1 27-19A6 6 0 0 1 39-19L39-1Z" fill="none" stroke="#a87445" stroke-width="1.4"/>
+      <circle cx="32" cy="-58" r="4.5" fill="url(#p02a-glow)" stroke="#c9ab7f" stroke-width="1.4"/>
+    </g>
+
+    <!-- chapel with steeple -->
+    <g id="p02a-chapel">
+      <g filter="url(#p02a-shadow)" opacity="0.42">
+        <polygon points="-40,2 80,2 -30,32 -140,32" fill="#173a1c"/>
+        <polygon points="-46,0 -8,0 -104,-44 -132,-32" fill="#173a1c"/>
+        <ellipse cx="30" cy="1" rx="66" ry="9" fill="#0f2c15"/>
+      </g>
+      <polygon points="0,0 76,0 76,-48 0,-48" fill="url(#p02a-wall-front)"/>
+      <polygon points="76,0 100,-15 100,-63 76,-48" fill="url(#p02a-wall-side)"/>
+      <polygon points="0,-48 38,-78 76,-48" fill="url(#p02a-gable)"/>
+      <polygon points="81,-46 105,-61 62,-95 38,-80" fill="url(#p02a-roof)"/>
+      <g stroke="#8f3313" stroke-opacity="0.42" stroke-width="1.5" fill="none">
+        <path d="M72.4-52.8 96.4-67.8"/>
+        <path d="M63.8-59.6 87.8-74.6"/>
+        <path d="M55.2-66.4 79.2-81.4"/>
+        <path d="M46.6-73.2 70.6-88.2"/>
+      </g>
+      <polygon points="81,-46 105,-61 62,-95 38,-80" fill="url(#p02a-roof-sheen)"/>
+      <path d="M-6-46 38-80 82-46" stroke="#c2542a" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+      <g stroke="#c9ab7f" stroke-width="2">
+        <path d="M14 0 14-26A9 9 0 0 1 32-26L32 0Z" fill="url(#p02a-glow)"/>
+        <path d="M46 0 46-26A9 9 0 0 1 64-26L64 0Z" fill="url(#p02a-glow)"/>
+      </g>
+      <polygon points="-46,0 -8,0 -8,-92 -46,-92" fill="url(#p02a-wall-front)"/>
+      <polygon points="-8,0 16,-15 16,-107 -8,-92" fill="url(#p02a-wall-side)"/>
+      <polygon points="-49,-92 -5,-92 -15,-158" fill="url(#p02a-roof)"/>
+      <polygon points="-5,-92 19,-107 -15,-158" fill="#b8451f"/>
+      <polygon points="-49,-92 -5,-92 -15,-158" fill="url(#p02a-roof-sheen)"/>
+      <path d="M-15-158 -15-176M-24-170 -6-170" stroke="#f6d489" stroke-width="3.4" stroke-linecap="round"/>
+      <circle cx="-27" cy="-58" r="8.5" fill="url(#p02a-glow)" stroke="#c9ab7f" stroke-width="2"/>
+      <g fill="#3a2415">
+        <path d="M-40-72 -40-84A5 5 0 0 1 -30-84L-30-72Z"/>
+        <path d="M-24-72 -24-84A5 5 0 0 1 -14-84L-14-72Z"/>
+      </g>
+      <path d="M-34 0 -34-22A9 9 0 0 1 -16-22L-16 0Z" fill="#6b3d21"/>
+      <path d="M-33-1 -33-22A8 8 0 0 1 -17-22L-17-1Z" fill="none" stroke="#a87445" stroke-width="1.4"/>
+    </g>
+
+    <!-- broccoli tree, foliage tinted through currentColor -->
+    <g id="p02a-tree">
+      <ellipse cx="-34" cy="3" rx="44" ry="9" fill="#123018" opacity="0.4" filter="url(#p02a-shadow)"/>
+      <path d="M-4 3C-6-12-6-24-4-33L5-33C7-23 7-11 5 3Z" fill="url(#p02a-trunk)"/>
+      <g fill="currentColor">
+        <circle cx="-18" cy="-42" r="18"/>
+        <circle cx="16" cy="-46" r="17"/>
+        <circle cx="-2" cy="-62" r="19"/>
+        <circle cx="-11" cy="-30" r="15"/>
+        <circle cx="12" cy="-29" r="14"/>
+        <circle cx="1" cy="-44" r="23"/>
+      </g>
+      <ellipse cx="0" cy="-45" rx="35" ry="36" fill="url(#p02a-foliage-shade)"/>
+      <circle cx="13" cy="-58" r="17" fill="url(#p02a-foliage-hi)"/>
+    </g>
+
+    <!-- canvas tent -->
+    <g id="p02a-tent">
+      <ellipse cx="-14" cy="3" rx="52" ry="9" fill="#123018" opacity="0.4" filter="url(#p02a-shadow)"/>
+      <polygon points="-46,2 40,2 -6,26 -84,26" fill="#173a1c" opacity="0.36" filter="url(#p02a-shadow)"/>
+      <polygon points="0,0 30,-48 60,0" fill="url(#p02a-tent)"/>
+      <polygon points="60,0 30,-48 46,-56 76,-12" fill="#8c3a20"/>
+      <path d="M30-48 22 0 38 0Z" fill="#4a1e10"/>
+      <path d="M30-48 46-56" stroke="#e79a68" stroke-width="3" stroke-linecap="round"/>
+      <path d="M30-48 30-58M30-56 72-2" stroke="#c9a37a" stroke-width="1.6"/>
+      <path d="M0 0 30-48 60 0" fill="none" stroke="#e08f5c" stroke-width="2" stroke-opacity="0.6"/>
+    </g>
+  </defs>
+
+  <!-- sky -->
+  <rect width="900" height="620" fill="url(#p02a-sky)"/>
+  <rect width="900" height="620" fill="url(#p02a-sun)"/>
+  <g filter="url(#p02a-organic)" opacity="0.4">
+    <ellipse cx="230" cy="96" rx="180" ry="22" fill="#fff2dc"/>
+    <ellipse cx="560" cy="60" rx="150" ry="16" fill="#ffe6c8"/>
+    <ellipse cx="120" cy="160" rx="130" ry="14" fill="#ffd9bd"/>
+  </g>
+
+  <!-- distant hills -->
+  <g filter="url(#p02a-blur-far)">
+    <path d="M-20 250C90 196 200 214 320 200 440 186 520 226 640 206 760 186 840 216 920 198L920 300-20 300Z" fill="#9db98a" opacity="0.85"/>
+    <path d="M-20 262C110 224 210 250 340 236 470 222 560 256 690 240 800 226 870 250 920 238L920 320-20 320Z" fill="#7b9c6a" opacity="0.9"/>
+  </g>
+
+  <!-- ground -->
+  <path d="M0 248C140 230 260 260 400 244 540 228 680 256 900 234L900 620 0 620Z" fill="url(#p02a-ground)"/>
+  <g filter="url(#p02a-organic)" opacity="0.3">
+    <ellipse cx="180" cy="330" rx="180" ry="40" fill="#b5d074"/>
+    <ellipse cx="700" cy="300" rx="200" ry="34" fill="#c2d97e"/>
+    <ellipse cx="480" cy="520" rx="260" ry="60" fill="#2c4d1f"/>
+    <ellipse cx="860" cy="440" rx="150" ry="46" fill="#6f9a44"/>
+  </g>
+
+  <!-- river -->
+  <path d="M120 268C210 300 170 364 264 406 358 448 400 510 540 620L700 620C570 505 520 448 424 404 330 362 320 306 200 264Z" fill="url(#p02a-water)"/>
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" filter="url(#p02a-blur-soft)">
+    <path d="M168 286C246 320 214 372 300 412 386 452 430 512 566 612" stroke-width="5" stroke-opacity="0.55"/>
+    <path d="M186 300C258 330 232 374 312 414" stroke-width="3" stroke-opacity="0.75"/>
+    <path d="M372 452C424 486 462 534 540 606" stroke-width="4" stroke-opacity="0.4"/>
+  </g>
+  <g fill="none" stroke="#ffd79a" stroke-opacity="0.5" stroke-linecap="round" filter="url(#p02a-blur-soft)">
+    <path d="M232 348C286 380 268 410 336 442" stroke-width="3.5"/>
+    <path d="M446 502C500 540 524 566 590 618" stroke-width="3"/>
+  </g>
+  <path d="M120 268C210 300 170 364 264 406 358 448 400 510 540 620" fill="none" stroke="#2b4a1d" stroke-width="3" stroke-opacity="0.45"/>
+  <path d="M200 264C320 306 330 362 424 404 520 448 570 505 700 620" fill="none" stroke="#2b4a1d" stroke-width="3" stroke-opacity="0.45"/>
+
+  <!-- winding track on the near bank -->
+  <path d="M-20 620C80 556 52 500 128 470 200 442 156 416 200 396" fill="none" stroke="url(#p02a-track)" stroke-width="34" stroke-linecap="round"/>
+  <path d="M-20 620C80 556 52 500 128 470 200 442 156 416 200 396" fill="none" stroke="#f0dcb6" stroke-width="10" stroke-opacity="0.4" stroke-linecap="round"/>
+
+  <!-- far trees and cottages -->
+  <g filter="url(#p02a-blur-far)" opacity="0.9">
+    <use href="#p02a-tree" transform="translate(140 292) scale(0.5)" color="#5d8a3e"/>
+    <use href="#p02a-tree" transform="translate(268 288) scale(0.46)" color="#4f7c36"/>
+    <use href="#p02a-tree" transform="translate(566 276) scale(0.48)" color="#618f42"/>
+    <use href="#p02a-tree" transform="translate(712 286) scale(0.54)" color="#4a7433"/>
+    <use href="#p02a-tree" transform="translate(858 292) scale(0.5)" color="#5a8a3c"/>
+  </g>
+  <g filter="url(#p02a-blur-soft)" opacity="0.95">
+    <use href="#p02a-cottage" transform="translate(372 292) scale(0.5)"/>
+    <use href="#p02a-cottage" transform="translate(506 282) scale(0.44)"/>
+    <use href="#p02a-cottage" transform="translate(806 300) scale(0.52)"/>
+  </g>
+
+  <!-- bridge -->
+  <g>
+    <path d="M262 452 466 424" stroke="#2c4a1e" stroke-width="9" stroke-opacity="0.35" filter="url(#p02a-shadow)"/>
+    <path d="M266 444C330 414 400 408 462 416L462 428C400 420 332 426 266 456Z" fill="#8a5c33"/>
+    <path d="M266 444C330 414 400 408 462 416" fill="none" stroke="#c08b52" stroke-width="4" stroke-linecap="round"/>
+    <g stroke="#5f3c1e" stroke-width="1.6" stroke-opacity="0.6">
+      <path d="M292 434 294 448"/><path d="M320 425 322 439"/><path d="M350 419 352 433"/>
+      <path d="M382 415 384 429"/><path d="M414 414 416 428"/><path d="M444 415 446 429"/>
+    </g>
+    <path d="M270 440C334 410 402 404 460 412" fill="none" stroke="#a97442" stroke-width="2.4" stroke-dasharray="1 13" stroke-linecap="round" transform="translate(0 -11)"/>
+  </g>
+
+  <!-- village, right bank -->
+  <use href="#p02a-chapel" transform="translate(636 356) scale(0.96)"/>
+  <use href="#p02a-cottage" transform="translate(778 336) scale(0.78)"/>
+  <use href="#p02a-tree" transform="translate(596 300) scale(0.6)" color="#4c7b34"/>
+  <use href="#p02a-tree" transform="translate(742 372) scale(0.78)" color="#6a9c40"/>
+  <use href="#p02a-cottage" transform="translate(704 434) scale(1.02)"/>
+  <use href="#p02a-cottage" transform="translate(552 486) scale(1.1)"/>
+  <use href="#p02a-tree" transform="translate(872 404) scale(0.9)" color="#3f6b2c"/>
+
+  <!-- village, near bank -->
+  <use href="#p02a-cottage" transform="translate(40 348) scale(0.72)"/>
+  <use href="#p02a-tree" transform="translate(178 350) scale(0.66)" color="#5f8f3c"/>
+  <use href="#p02a-cottage" transform="translate(66 442) scale(1)"/>
+  <use href="#p02a-tree" transform="translate(206 428) scale(0.86)" color="#487630"/>
+  <use href="#p02a-tent" transform="translate(126 566) scale(1.16)"/>
+  <use href="#p02a-tree" transform="translate(322 512) scale(1.05)" color="#3d6a2a"/>
+
+  <!-- foreground planting -->
+  <g fill="none" stroke="#25451c" stroke-linecap="round">
+    <path d="M18 620C6 578 26 554 14 526" stroke-width="7"/>
+    <path d="M244 620C256 580 232 556 246 528" stroke-width="6"/>
+    <path d="M470 620C458 584 476 560 464 536" stroke-width="6"/>
+    <path d="M790 620C802 578 778 554 792 526" stroke-width="7"/>
+  </g>
+  <use href="#p02a-tree" transform="translate(-6 618) scale(1.4)" color="#2f5a22"/>
+  <use href="#p02a-tree" transform="translate(880 610) scale(1.5)" color="#28501e"/>
+
+  <!-- near defocused foliage for depth of field -->
+  <g filter="url(#p02a-blur-bokeh)" opacity="0.62">
+    <ellipse cx="60" cy="600" rx="130" ry="70" fill="#20411a"/>
+    <ellipse cx="820" cy="596" rx="150" ry="76" fill="#1b3a17"/>
+    <ellipse cx="420" cy="628" rx="200" ry="46" fill="#24461c"/>
+  </g>
+
+  <!-- warm light wash -->
+  <rect width="900" height="620" fill="url(#p02a-sun)" opacity="0.35"/>
+  <rect width="900" height="620" fill="url(#p02a-vignette)"/>
+  <rect width="900" height="620" filter="url(#p02a-grain)" opacity="0.28"/>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img"
+     aria-label="Abstract liquid colour render in electric blue and teal">
+  <defs>
+    <linearGradient id="p03a-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06203f"/>
+      <stop offset="45%" stop-color="#0a3f7a"/>
+      <stop offset="100%" stop-color="#02121f"/>
+    </linearGradient>
+
+    <linearGradient id="p03a-ribbon-a" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#7ff3ff"/>
+      <stop offset="35%" stop-color="#1fa7f0"/>
+      <stop offset="70%" stop-color="#1450d8"/>
+      <stop offset="100%" stop-color="#0a2a86"/>
+    </linearGradient>
+
+    <linearGradient id="p03a-ribbon-b" x1="10%" y1="100%" x2="90%" y2="0%">
+      <stop offset="0%" stop-color="#0d7fa8"/>
+      <stop offset="40%" stop-color="#3ce0d5"/>
+      <stop offset="75%" stop-color="#eafcff"/>
+      <stop offset="100%" stop-color="#9fe8ff"/>
+    </linearGradient>
+
+    <linearGradient id="p03a-ribbon-c" x1="0%" y1="30%" x2="100%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#bfe9ff"/>
+      <stop offset="100%" stop-color="#2f8fd8"/>
+    </linearGradient>
+
+    <radialGradient id="p03a-pool" cx="38%" cy="34%" r="70%">
+      <stop offset="0%" stop-color="#eafeff"/>
+      <stop offset="45%" stop-color="#4fc9f5"/>
+      <stop offset="100%" stop-color="#0b3f8d"/>
+    </radialGradient>
+
+    <radialGradient id="p03a-bead" cx="34%" cy="28%" r="72%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#9ee4ff"/>
+      <stop offset="100%" stop-color="#0d5fb4"/>
+    </radialGradient>
+
+    <filter id="p03a-goo" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011 0.02" numOctaves="3" seed="17"
+                    result="p03a-noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="p03a-noise" scale="34"
+                         xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <filter id="p03a-blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+
+    <filter id="p03a-blur-sm" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+
+    <clipPath id="p03a-frame">
+      <rect width="900" height="620"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#p03a-frame)">
+    <rect width="900" height="620" fill="url(#p03a-bg)"/>
+
+    <!-- deep glow pools -->
+    <ellipse cx="250" cy="180" rx="280" ry="200" fill="#1466c8" opacity=".55" filter="url(#p03a-blur)"/>
+    <ellipse cx="720" cy="470" rx="300" ry="210" fill="#0e9fb8" opacity=".45" filter="url(#p03a-blur)"/>
+
+    <!-- swirling ribbons -->
+    <g filter="url(#p03a-goo)">
+      <path d="M-60 430 C 140 300 240 470 420 380 C 590 296 660 430 980 300 L 980 700 L -60 700 Z"
+            fill="url(#p03a-ribbon-a)" opacity=".95"/>
+      <path d="M-60 300 C 130 210 250 340 430 250 C 610 160 700 300 980 190"
+            fill="none" stroke="url(#p03a-ribbon-b)" stroke-width="86" stroke-linecap="round"
+            opacity=".92"/>
+      <path d="M-40 520 C 180 440 300 560 500 480 C 690 404 800 520 960 450"
+            fill="none" stroke="url(#p03a-ribbon-c)" stroke-width="44" stroke-linecap="round"
+            opacity=".85"/>
+      <path d="M120 620 C 200 470 340 520 400 380 C 452 258 560 250 620 130"
+            fill="none" stroke="#8fe6ff" stroke-width="26" stroke-linecap="round" opacity=".6"/>
+    </g>
+
+    <!-- liquid pool -->
+    <ellipse cx="330" cy="330" rx="190" ry="150" fill="url(#p03a-pool)" opacity=".9"
+             filter="url(#p03a-goo)"/>
+
+    <!-- specular streaks -->
+    <path d="M180 210 C 280 150 380 170 470 130" fill="none" stroke="#ffffff" stroke-width="12"
+          stroke-linecap="round" opacity=".55" filter="url(#p03a-blur-sm)"/>
+    <path d="M520 420 C 620 380 700 400 800 360" fill="none" stroke="#ffffff" stroke-width="9"
+          stroke-linecap="round" opacity=".4" filter="url(#p03a-blur-sm)"/>
+
+    <!-- beads -->
+    <circle cx="686" cy="196" r="58" fill="url(#p03a-bead)"/>
+    <circle cx="666" cy="176" r="16" fill="#ffffff" opacity=".85"/>
+    <circle cx="196" cy="486" r="40" fill="url(#p03a-bead)"/>
+    <circle cx="184" cy="472" r="11" fill="#ffffff" opacity=".8"/>
+    <circle cx="806" cy="126" r="24" fill="url(#p03a-bead)"/>
+    <circle cx="470" cy="546" r="30" fill="url(#p03a-bead)"/>
+    <circle cx="462" cy="536" r="8" fill="#ffffff" opacity=".8"/>
+    <circle cx="580" cy="266" r="17" fill="#eafcff" opacity=".85"/>
+    <circle cx="118" cy="286" r="13" fill="#eafcff" opacity=".7"/>
+
+    <!-- vignette -->
+    <rect width="900" height="620" fill="none"/>
+    <ellipse cx="450" cy="310" rx="560" ry="400" fill="none" stroke="#02101f" stroke-width="180"
+             opacity=".55" filter="url(#p03a-blur)"/>
+  </g>
+</svg>

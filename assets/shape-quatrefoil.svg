@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Quatrefoil">
+  <g fill="#ffffff">
+    <rect x="58" y="58" width="84" height="84" />
+    <circle cx="58" cy="58" r="56" />
+    <circle cx="142" cy="58" r="56" />
+    <circle cx="58" cy="142" r="56" />
+    <circle cx="142" cy="142" r="56" />
+  </g>
+</svg>
