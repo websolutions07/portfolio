@@ -698,7 +698,7 @@
   async function loadDynamicData() {
     try {
       // Fetch Services
-      const servicesRes = await fetch('http://localhost:3000/api/services');
+      const servicesRes = await fetch('http:///portfolio-7cm8.onrender.com/api/services');
       if (servicesRes.ok) {
         const services = await servicesRes.json();
         const servicesList = document.getElementById('services-list');
@@ -750,7 +750,7 @@
       }
 
       // Fetch Projects
-      const projectsRes = await fetch('http://localhost:3000/api/projects');
+      const projectsRes = await fetch('http://portfolio-7cm8.onrender.com//api/projects');
       if (projectsRes.ok) {
         const projects = await projectsRes.json();
         const projectsList = document.getElementById('projects-list');
