@@ -1,131 +1,199 @@
+require('dotenv').config();
 const express = require('express');
+const mongoose = require('mongoose');
 const cors = require('cors');
-const sqlite3 = require('sqlite3');
-const { open } = require('sqlite');
+const helmet = require('helmet');
 const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// Middleware
+app.use(helmet());
+app.use(cors({
+    origin: ['https://portfolio-frontend-uhpl.onrender.com', 'http://localhost:3000', 'http://localhost:5000', 'http://127.0.0.1:3000', 'http://127.0.0.1:5000'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-let db;
+// Serve static assets if necessary (from previous server.js)
+app.use('/assets', express.static(path.join(__dirname, '../assets')));
 
-async function initializeDB() {
-    db = await open({
-        filename: path.join(__dirname, 'database.sqlite'),
-        driver: sqlite3.Database
+// --- Mongoose Schemas & Models ---
+const serviceSchema = new mongoose.Schema({
+    title: String,
+    description: String,
+    icon: String,
+    order: Number
+});
+const Service = mongoose.model('Service', serviceSchema);
+
+const projectSchema = new mongoose.Schema({
+    title: String,
+    description: String,
+    image: String,
+    tags: [String],
+    liveUrl: String,
+    githubUrl: String,
+    featured: Boolean
+});
+const Project = mongoose.model('Project', projectSchema);
+
+const contactSchema = new mongoose.Schema({
+    fullName: String,
+    mobileNo: String,
+    email: String,
+    message: String,
+    createdAt: { type: Date, default: Date.now }
+});
+const Contact = mongoose.model('Contact', contactSchema);
+
+// --- Database Connection & Seeding ---
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/portfolio';
+
+mongoose.connect(MONGO_URI)
+    .then(async () => {
+        console.log('Connected to MongoDB successfully');
+        await seedDatabase();
+    })
+    .catch((err) => {
+        console.error('MongoDB connection error:', err);
     });
 
-    await db.exec(`
-        CREATE TABLE IF NOT EXISTS contacts (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            fullname TEXT NOT NULL,
-            phone TEXT NOT NULL,
-            email TEXT NOT NULL,
-            message TEXT,
-            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-        );
-
-        CREATE TABLE IF NOT EXISTS projects (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT NOT NULL,
-            client_location TEXT NOT NULL,
-            tags TEXT NOT NULL,
-            url TEXT NOT NULL,
-            image_url TEXT NOT NULL
-        );
-
-        CREATE TABLE IF NOT EXISTS services (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            tagline TEXT NOT NULL,
-            description TEXT NOT NULL,
-            chips TEXT NOT NULL
-        );
-    `);
-
-    // Check if projects are empty and seed data
-    const projectsCount = await db.get(`SELECT COUNT(*) as count FROM projects`);
-    if (projectsCount.count === 0) {
-        console.log('Seeding projects...');
-        const projects = [
-            { title: 'Vanguard Construction Group', client_location: 'Client • Austin, TX', tags: 'Commercial & Architecture,3D BIM Model View', url: 'https://vanguard-construction.us', image_url: 'assets/proj-construction.jpg' },
-            { title: 'Lumina Dental Studio', client_location: 'Client • San Francisco, CA', tags: 'Cosmetic Dentistry,3D Smile Gallery', url: 'https://luminadental-sf.com', image_url: 'assets/proj-dental.jpg' },
-            { title: 'PristinePro Cleaning Services', client_location: 'Client • Chicago, IL', tags: 'Commercial & Residential,Instant Quote Engine', url: 'https://pristineprocleaning.us', image_url: 'assets/proj-cleaning.jpg' }
-        ];
-
-        for (const p of projects) {
-            await db.run(
-                `INSERT INTO projects (title, client_location, tags, url, image_url) VALUES (?, ?, ?, ?, ?)`,
-                [p.title, p.client_location, p.tags, p.url, p.image_url]
-            );
+async function seedDatabase() {
+    try {
+        const serviceCount = await Service.countDocuments();
+        if (serviceCount === 0) {
+            console.log('Seeding Services...');
+            const defaultServices = [
+                { title: 'UI/UX & Product Design', description: 'Intuitive, human-centered digital experiences.', icon: 'palette', order: 1 },
+                { title: 'Custom Web Design', description: 'Visually stunning, bespoke website layouts.', icon: 'code', order: 2 },
+                { title: 'Design Systems', description: 'Scalable UI kits and component libraries.', icon: 'layers', order: 3 },
+                { title: 'Interactive Prototyping', description: 'High-fidelity interactive prototypes.', icon: 'smartphone', order: 4 },
+                { title: 'Landing Page Optimization', description: 'High-impact, conversion-focused landing pages.', icon: 'trending-up', order: 5 }
+            ];
+            await Service.insertMany(defaultServices);
+            console.log('Services seeded successfully.');
         }
-    }
 
-    // Check if services are empty and seed data
-    const servicesCount = await db.get(`SELECT COUNT(*) as count FROM services`);
-    if (servicesCount.count === 0) {
-        console.log('Seeding services...');
-        const services = [
-            { name: 'UI/UX & Product Design', tagline: 'UI / UX', description: 'Intuitive, human-centered digital experiences, wireframes, and interface systems crafted with precision for web and mobile platforms.', chips: 'Figma Architecture,User Flow Mapping,Wireframing,UX Research' },
-            { name: 'Custom Web Design', tagline: 'WEB DESIGN', description: 'Visually stunning, bespoke website layouts tailored to elevate brand identity, engage visitors, and provide seamless responsiveness across all screen sizes.', chips: 'Bespoke Layouts,Fluid Typography,3D Asset Integration,Brand Identity' },
-            { name: 'Design Systems', tagline: 'SYSTEMS', description: 'Scalable UI kits, component libraries, typography hierarchies, and design tokens that ensure visual consistency and streamlined development.', chips: 'Design Tokens,Figma Variables,Reusable UI Kits,Auto Layout 5.0' },
-            { name: 'Interactive Prototyping', tagline: 'PROTOTYPE', description: 'High-fidelity interactive prototypes with dynamic micro-interactions, animations, and user flows to test, iterate, and validate design concepts.', chips: 'Micro-Interactions,60fps Motion,Clickable Prototypes,User Testing' },
-            { name: 'Landing Page Optimization', tagline: 'GROWTH', description: 'High-impact, conversion-focused landing pages designed for optimal speed, visual storytelling, clear call-to-actions, and maximum engagement.', chips: 'Conversion Rate (CRO),Google Core Web Vitals,SEO Architecture,<0.8s Sub-Second Load' }
-        ];
-
-        for (const s of services) {
-            await db.run(
-                `INSERT INTO services (name, tagline, description, chips) VALUES (?, ?, ?, ?)`,
-                [s.name, s.tagline, s.description, s.chips]
-            );
+        const projectCount = await Project.countDocuments();
+        if (projectCount === 0) {
+            console.log('Seeding Projects...');
+            const defaultProjects = [
+                {
+                    title: 'Vanguard Construction Group',
+                    description: 'Commercial & Architecture 3D BIM Model View.',
+                    image: 'assets/proj-construction.jpg',
+                    tags: ['Commercial', 'Architecture'],
+                    liveUrl: 'https://vanguard-construction.us',
+                    githubUrl: '',
+                    featured: true
+                },
+                {
+                    title: 'Lumina Dental Studio',
+                    description: 'Cosmetic Dentistry & 3D Smile Gallery.',
+                    image: 'assets/proj-dental.jpg',
+                    tags: ['Dentistry', '3D'],
+                    liveUrl: 'https://luminadental-sf.com',
+                    githubUrl: '',
+                    featured: true
+                },
+                {
+                    title: 'PristinePro Cleaning Services',
+                    description: 'Commercial & Residential Instant Quote Engine.',
+                    image: 'assets/proj-cleaning.jpg',
+                    tags: ['Commercial', 'Residential'],
+                    liveUrl: 'https://pristineprocleaning.us',
+                    githubUrl: '',
+                    featured: false
+                }
+            ];
+            await Project.insertMany(defaultProjects);
+            console.log('Projects seeded successfully.');
         }
+    } catch (err) {
+        console.error('Error seeding database:', err);
     }
 }
 
-// API Routes
-app.get('/api/projects', async (req, res) => {
+// --- API Routes ---
+
+// Root Health Check
+app.get('/', (req, res, next) => {
     try {
-        const projects = await db.all('SELECT * FROM projects ORDER BY id ASC');
-        res.json(projects);
+        res.json({ status: "OK", message: "Portfolio Backend API is running" });
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        next(err);
     }
 });
 
-app.get('/api/services', async (req, res) => {
+// Services API
+app.get('/api/services', async (req, res, next) => {
     try {
-        const services = await db.all('SELECT * FROM services ORDER BY id ASC');
+        const services = await Service.find().sort({ order: 1, createdAt: 1 });
         res.json(services);
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        next(err);
     }
 });
 
-app.post('/api/contact', async (req, res) => {
-    const { fullname, phone, email, message } = req.body;
-
-    if (!fullname || !phone || !email) {
-        return res.status(400).json({ error: 'Missing required fields' });
-    }
-
+app.post('/api/services', async (req, res, next) => {
     try {
-        await db.run(
-            `INSERT INTO contacts (fullname, phone, email, message) VALUES (?, ?, ?, ?)`,
-            [fullname, phone, email, message]
-        );
-        res.status(201).json({ success: true, message: 'Message received successfully.' });
+        const newService = new Service(req.body);
+        const savedService = await newService.save();
+        res.status(201).json(savedService);
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        next(err);
     }
 });
 
-initializeDB().then(() => {
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
-    });
-}).catch(err => {
-    console.error('Failed to initialize database:', err);
+// Projects API
+app.get('/api/projects', async (req, res, next) => {
+    try {
+        const projects = await Project.find().sort({ createdAt: -1 });
+        res.json(projects);
+    } catch (err) {
+        next(err);
+    }
+});
+
+app.post('/api/projects', async (req, res, next) => {
+    try {
+        const newProject = new Project(req.body);
+        const savedProject = await newProject.save();
+        res.status(201).json(savedProject);
+    } catch (err) {
+        next(err);
+    }
+});
+
+// Contact Form API
+app.post('/api/contact', async (req, res, next) => {
+    try {
+        const { fullName, mobileNo, email, message } = req.body;
+        
+        if (!fullName || !email || !message) {
+            return res.status(400).json({ success: false, error: 'Please provide all required fields.' });
+        }
+
+        const newContact = new Contact({ fullName, mobileNo, email, message });
+        await newContact.save();
+
+        res.status(201).json({ success: true, message: "Message sent successfully" });
+    } catch (err) {
+        next(err);
+    }
+});
+
+// --- Central Error-Handling Middleware ---
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ success: false, error: "Server error" });
+});
+
+// --- Start Server ---
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
